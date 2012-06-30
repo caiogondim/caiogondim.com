@@ -1,0 +1,4 @@
+.DS_Store
+.cake_task_cache
+site/*
+site/**/*
