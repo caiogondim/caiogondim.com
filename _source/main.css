@@ -23,7 +23,7 @@ nav ul {
 	display: inline-block;
 	float: right;
 	margin-left: 20px;
-	font-family: 'Myriad Pro';
+	font-family: 'Open Sans';
 	text-transform: uppercase;
 	font-size: 14px;
 	padding: 0 20px;
@@ -32,6 +32,8 @@ nav ul {
 .nav-item a {
 	text-decoration: none;
 	color: #999999;
+	display: inline-block;
+	padding-bottom: 4px;
 }
 
 .nav-item-current {
@@ -46,7 +48,7 @@ nav ul {
 
 p a {
 	text-decoration: none;
-	display: inline-block;
+	/*display: inline-block;*/
 	border-bottom: 1px dashed #CCCCCC;
 	color: #333;
 }
@@ -73,15 +75,15 @@ article header {
 }
 
 article header h1 {
-	font-family: 'Myriad Pro';
+	font-family: 'Open Sans';
 	font-weight: bold;
 	font-size: 96px;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	text-align: center;
 	line-height: 85px;
-	letter-spacing: -3px;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	letter-spacing: -10px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 	position: absolute;
 	top: 190px;
 	margin: 0;
@@ -90,17 +92,26 @@ article header h1 {
 article header h2 {
 	position: absolute;
 	top: 150px;
-	font-family: 'Myriad Pro';
+	font-family: 'Open Sans';
 	font-weight: lighter;
-	font-size: 18px;
+	font-size: 22px;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	text-align: center;
 	letter-spacing: -1px;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 	margin: 0;
 	display: block;
 	width: 100%;
+}
+
+article > h2 {
+	font-family: 'Open Sans';
+	font-size: 24px;
+	font-weight: normal;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	color: #CCCCCC;
 }
 
 article p {
@@ -113,7 +124,7 @@ article p {
 }
 
 article p:not(:first-of-type) {
-	text-indent: 80px;
+	text-indent: 20px;
 }
 
 article p:first-of-type:first-letter {
@@ -159,7 +170,7 @@ ul#projects li {
 }
 
 .project-description h1 {
-	font-family: 'Myriad Pro';
+	font-family: 'Open Sans';
 	font-size: 24px;
 	font-weight: normal;
 	letter-spacing: -1px;
@@ -188,7 +199,7 @@ ul#projects li {
 
 	#about h1 {
 		font-size: 24px;
-		font-family: 'Myriad Pro';
+		font-family: 'Open Sans';
 		text-transform: uppercase;
 		color: #CCCCCC;
 		font-weight: lighter;
@@ -201,7 +212,7 @@ ul#projects li {
 
 	#about-me {
 		position: relative;
-		height: 300px;
+		height: 250px;
 		margin-bottom: 80px;
 	}
 
