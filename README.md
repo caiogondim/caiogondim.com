@@ -1,4 +1,3 @@
-caiogondim.com
-==============
+# caiogondim.com
 
-My personal website
+My blog

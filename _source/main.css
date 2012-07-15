@@ -116,7 +116,7 @@ article > h2 {
 }
 
 article p {
-	font-family: 'Georgia';
+	font-family: 'Droid Serif';
 	font-size: 21px;
 	font-weight: lighter;
 	color: #333333;
@@ -180,7 +180,7 @@ ul#projects li {
 }
 
 .project-description p {
-	font-family: Georgia;
+	font-family: 'Droid Serif';
 	font-size: 21px;
 	color: #333333;
 }
@@ -230,7 +230,7 @@ ul#projects li {
 
 		#about-me-description {
 			margin-left: 20px;
-			font-family: Georgia;
+			font-family: 'Droid Serif';
 			font-size: 21px;
 			color: #333333;
 			width: 420px;
@@ -258,7 +258,7 @@ ul#projects li {
 
 		#about-blog-description {
 			margin-left: 20px;
-			font-family: Georgia;
+			font-family: 'Droid Serif';
 			font-size: 21px;
 			color: #333333;
 			width: 420px;
