@@ -148,7 +148,7 @@ ul#projects {
 	width: 700px;
 	position: absolute;
 	left: 50%;
-	top: 200px;
+	top: 100px;
 	margin-left: -350px;
 }
 
@@ -177,6 +177,7 @@ ul#projects li {
 	letter-spacing: -2px;
 	text-transform: uppercase;
 	color: #CCCCCC;
+	margin-bottom: 10px;
 }
 
 .project-description p {
@@ -195,7 +196,7 @@ ul#projects li {
 	position: absolute;
 	left: 50%;
 	margin-left: -350px;
-	top: 200px
+	top: 100px
 }
 
 	#about h1 {
@@ -205,6 +206,7 @@ ul#projects li {
 		color: #CCCCCC;
 		font-weight: lighter;
 		letter-spacing: -2px;
+		margin-bottom: 10px;
 	}
 
 	#about p {
