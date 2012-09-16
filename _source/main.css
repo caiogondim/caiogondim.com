@@ -156,10 +156,12 @@ ul#projects li {
 	display: block;
 	position: relative;
 	margin: 0 0 80px 0;
+	height: 204px;
 }
 
 .project-logo {
-
+	width: 200px;
+	height: 200px;
 }
 
 .project-description {
