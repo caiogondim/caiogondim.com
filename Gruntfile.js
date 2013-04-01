@@ -16,10 +16,25 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {
+      dist: {
+        files: {
+          'site/style/main.css': '_source/style/main.scss'
+        },
+        options: {
+          style: 'compressed'
+        }
+      }
+    },
+
     watch: {
       jekyll: {
         files: ['_source/**/*.html'],
         tasks: ['jekyll:dev']
+      },
+      sass: {
+        files: ['_source/**/*.scss'],
+        tasks: ['sass:dist']
       }
     }
   })
@@ -27,5 +42,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['jekyll:server', 'watch'])
 
   grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-sass')
   grunt.loadNpmTasks('grunt-jekyll')
 }
