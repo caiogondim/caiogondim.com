@@ -3,6 +3,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-jekyll'
+  grunt.loadNpmTasks 'grunt-rsync'
 
   grunt.initConfig(
 
@@ -16,6 +17,13 @@ module.exports = (grunt) ->
       dev:
         src: '_source'
         dest: 'site'
+
+    rsync:
+      prod:
+        src: './site/'
+        dest: '~/caiogondim.com/'
+        host: 'caiogondim@bugsy.dreamhost.com'
+        recursive: true
 
     sass:
       dist:
@@ -33,5 +41,5 @@ module.exports = (grunt) ->
         tasks: ['sass:dist']
   )
 
-  grunt.registerTask('default', ['jekyll:server', 'watch'])
-
+  grunt.registerTask('run', ['jekyll:server', 'watch'])
+  grunt.registerTask('deploy', ['rsync:prod'])
