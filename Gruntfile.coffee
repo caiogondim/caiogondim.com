@@ -5,6 +5,16 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-jekyll'
   grunt.loadNpmTasks 'grunt-rsync'
 
+  grunt.registerTask('fixPermissions', 'Corrige permissão dos arquivos antes do deploy', () ->
+    exec = require('child_process').exec
+    done = @async()
+
+    fixPermissions = exec 'chmod -R 0755 site'
+    fixPermissions.on('exit', () ->
+      done(true)
+    )
+  )
+
   grunt.initConfig(
 
     jekyll:
@@ -42,4 +52,4 @@ module.exports = (grunt) ->
   )
 
   grunt.registerTask('run', ['jekyll:server', 'watch'])
-  grunt.registerTask('deploy', ['rsync:prod'])
+  grunt.registerTask('deploy', ['fixPermissions', 'rsync:prod'])
