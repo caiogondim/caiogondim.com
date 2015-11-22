@@ -1,0 +1,23 @@
+{
+  "name": "caiogondim.com",
+  "version": "1.0.0",
+  "description": "My blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiogondim/caiogondim.com.git"
+  },
+  "author": "Caio Gondim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiogondim/caiogondim.com/issues"
+  },
+  "homepage": "https://github.com/caiogondim/caiogondim.com#readme",
+  "devDependencies": {
+    "metalsmith": "^2.1.0"
+  }
+}
