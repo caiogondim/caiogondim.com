@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/caiogondim/caiogondim.com#readme",
   "devDependencies": {
-    "metalsmith": "^2.1.0"
+    "handlebars": "^4.0.5",
+    "metalsmith": "^2.1.0",
+    "nunjucks": "^2.2.0"
   }
 }
