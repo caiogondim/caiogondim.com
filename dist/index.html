@@ -6,6 +6,9 @@
     <link rel="icon" type="image/png" href="/favicon-96x96.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      body{
+          color: #333;
+      }
         .container {
             max-width: 800px;
             left: 50%;
@@ -22,15 +25,28 @@
             border-right: none;
             border-left: none;
         }
+
         small {
           font-size: 20px;
         }
 
-        a:visited {
-          color: blue;
+        code {
+          border: 1px solid rgb(221, 221, 221);
+          border-radius: 3px;
+          font-size: 18px;
+          padding: 2px;
+          white-space: nowrap;
+        }
+
+        a, a:visited {
+          color: #4848FF;
         }
 
         /* BEGIN Header */
+
+        .header {
+          text-align: center;
+        }
 
         .header__title {
             margin-bottom: 0;
@@ -46,6 +62,9 @@
         .post {
             font-size: 20px;
         }
+        .post__header {
+          text-align: center;
+        }
         .post__title {
             margin-bottom: 0;
         }
@@ -54,6 +73,7 @@
 
         /* BEGIN Footer */
         .footer {
+          text-align: center;
           font-size: 20px;
         }
         .footer__list {
@@ -85,8 +105,10 @@
         </div>
         <hr>
         <div class="post">
+  <div class="post__header">
     <h2 class="post__title"><a href="/post.html">Lorem ipsum</a></h2>
     <small class="post__date">21/07/2016</small>
+  </div>
     <p>
     Lorem ipsum dolor sit amet, <a href="#">asdad</a> consectetur adipisicing elit. Natus aut
     consequatur repellendus numquam dolorum quod eos similique doloremque
@@ -105,11 +127,16 @@
     eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
     reiciendis excepturi at.
     </p>
+    <p>
+      <a href="#">Read more</a>
+    </p>
 </div>
 <hr>
 <div class="post">
+  <div class="post__header">
     <h2 class="post__title"><a href="/post.html">Lorem ipsum</a></h2>
     <small class="post__date">21/07/2016</small>
+  </div>
     <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
     consequatur repellendus numquam dolorum quod eos similique doloremque
@@ -127,6 +154,9 @@
     consequatur repellendus numquam dolorum quod eos similique doloremque
     eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
     reiciendis excepturi at.
+    </p>
+    <p>
+      <a href="#">Read more</a>
     </p>
 </div>
 
