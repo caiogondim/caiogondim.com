@@ -20,6 +20,7 @@
   "devDependencies": {
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
+    "metalsmith-watch": "^1.0.1",
     "nunjucks": "^2.2.0"
   }
 }
