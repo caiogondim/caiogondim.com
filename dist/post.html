@@ -6,20 +6,48 @@
     <link rel="icon" type="image/png" href="/favicon-96x96.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      body{
+          color: #333;
+      }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             left: 50%;
             transform: translateX(-50%);
             position: relative;
             padding: 0 20px;
+            line-height: 1.5;
         }
 
         hr {
             margin: 30px 0;
+            border-top: 1px solid;
+            border-bottom: none;
+            border-right: none;
+            border-left: none;
         }
-    
+
+        small {
+          font-size: 20px;
+        }
+
+        code {
+          border: 1px solid rgb(221, 221, 221);
+          border-radius: 3px;
+          font-size: 18px;
+          padding: 2px;
+          white-space: nowrap;
+        }
+
+        a, a:visited {
+          color: #4848FF;
+        }
+
         /* BEGIN Header */
-        
+
+        .header {
+          text-align: center;
+        }
+
         .header__title {
             margin-bottom: 0;
         }
@@ -31,13 +59,37 @@
         /* END Header */
 
         /* BEGIN post */
+        .post {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .post__header {
+          text-align: center;
+        }
         .post__title {
             margin-bottom: 0;
         }
+        .post__figure {
+          width: 100%;
+          padding: 0;
+          margin: 20px 0;
+        }
+        .post__figcaption {
+          text-align: center;
+        }
+        .post__img {
+
+          width: 100%;
+        }
+
         /* END post */
 
 
         /* BEGIN Footer */
+        .footer {
+          text-align: center;
+          font-size: 20px;
+        }
         .footer__list {
             list-style: none;
             padding: 0;
@@ -57,37 +109,69 @@
                 <a href="/">Caio Gondim</a>
             </h1>
             <small class="header__subtitle">about software, human-computer interface, photography and life</small>
+            <div class="footer">
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="/about.htlm">About</a></li>
+                    <li class="footer__list-item"><a href="/projects">Projects</a></li>
+                    <li class="footer__list-item"><a href="/archive.html">Archive</a></li>
+                </ul>
+            </div>
         </div>
         <hr>
         <div class="post">
-            <h2 class="post__title">Lorem ipsum</h2>
-            <small class="post__date">21/07/2016</small>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
-            consequatur repellendus numquam dolorum quod eos similique doloremque
-            eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
-            reiciendis excepturi at.
-            </p>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
-            consequatur repellendus numquam dolorum quod eos similique doloremque
-            eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
-            reiciendis excepturi at.
-            </p>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
-            consequatur repellendus numquam dolorum quod eos similique doloremque
-            eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
-            reiciendis excepturi at.
-            </p>
-        </div>
-        
+  <div class="post__header">
+    <h2 class="post__title"><a href="/post.html">Lorem ipsum</a></h2>
+    <small class="post__date">21/07/2016</small>
+  </div>
+    <p>
+    Lorem ipsum dolor sit amet, <a href="#">asdad</a> consectetur adipisicing elit. Natus aut
+    consequatur repellendus numquam dolorum quod eos similique doloremque
+    eaque, placeat voluptas <b>perferendis</b> eligendi rerum ducimus vel nemo,
+    reiciendis excepturi at.
+    </p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
+    consequatur <code>repellendus</code> numquam dolorum quod eos similique doloremque
+    eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
+    reiciendis excepturi at.
+    </p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
+    consequatur repellendus numquam dolorum quod eos similique doloremque
+    eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
+    reiciendis excepturi at.
+    </p>
+
+    <figure class="post__figure">
+      <img
+        class="post__img"
+        style="width: 100%;"
+        src="http://lorempixel.com/1600/1200/sports/"
+        alt="lorem ipsum"
+      />
+      <figcaption class="post__figcaption">lorem ipsum</figcaption>
+    </figure>
+
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
+    consequatur repellendus numquam dolorum quod eos similique doloremque
+    eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
+    reiciendis excepturi at.
+    </p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut
+    consequatur repellendus numquam dolorum quod eos similique doloremque
+    eaque, placeat voluptas perferendis eligendi rerum ducimus vel nemo,
+    reiciendis excepturi at.
+    </p>
+</div>
+
         <hr>
         <div class="footer">
             <ul class="footer__list">
-                <li class="footer__list-item"><a href="https://twitter.com/caio_gondim">About</a></li>
-                <li class="footer__list-item"><a href="https://twitter.com/caio_gondim">Projects</a></li>
-                <li class="footer__list-item"><a href="https://github.com/caiogondim">Archive</a></li>
+                <li class="footer__list-item"><a href="/about.htlm">About</a></li>
+                <li class="footer__list-item"><a href="/projects">Projects</a></li>
+                <li class="footer__list-item"><a href="/archive.html">Archive</a></li>
             </ul>
         </div>
     </div>
