@@ -56,6 +56,11 @@
             margin-top: 10px;
         }
 
+        .header hr {
+          margin-bottom: 60px;
+          margin-top: 60px;
+        }
+
         /* END Header */
 
         /* BEGIN post */
@@ -68,6 +73,7 @@
         }
         .post__header {
           text-align: center;
+          margin-bottom: 60px;
         }
         .post__title {
             margin-bottom: 0;
@@ -114,7 +120,18 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="post">
+          <div class="post__header">
+            <h2 class="post__title">{{title}}</h2>
+            <small class="post__date">{{date}}</small>
+          </div>
+            {{{contents}}}
+        </div>
+
+
         <div class="header">
+            <hr>
             <h1 class="header__title">
                 <a href="/">Caio Gondim</a>
             </h1>
@@ -126,23 +143,6 @@
                     <li class="footer__list-item"><a href="/archive.html">Archive</a></li>
                 </ul>
             </div>
-        </div>
-        <hr>
-        <div class="post">
-          <div class="post__header">
-            <h2 class="post__title">{{title}}</h2>
-            <small class="post__date">{{date}}</small>
-          </div>
-            {{{contents}}}
-        </div>
-
-        <hr>
-        <div class="footer">
-            <ul class="footer__list">
-                <li class="footer__list-item"><a href="/about.htlm">About</a></li>
-                <li class="footer__list-item"><a href="/projects">Projects</a></li>
-                <li class="footer__list-item"><a href="/archive.html">Archive</a></li>
-            </ul>
         </div>
     </div>
 </body>
