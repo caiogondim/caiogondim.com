@@ -5,6 +5,7 @@ var layouts = require('metalsmith-layouts')
 const watch = require('metalsmith-watch')
 const serve = require('metalsmith-serve')
 const markdown = require('metalsmith-markdown')
+const partial = require('metalsmith-partial')
 
 metalsmith(__dirname)
     .use(serve({}))
@@ -12,11 +13,13 @@ metalsmith(__dirname)
     .use(watch({
       paths: {
         "${source}/**/*": true,
-        "layouts/*": "**/*",
+        "layouts/*": true,
+        "partials/*": true
       }
     }))
     .use(layouts({
-      engine: 'handlebars'
+      engine: 'handlebars',
+      partials: './partials'
     }))
     .destination('./dist')
     .build((error) => {
