@@ -6,8 +6,10 @@ const watch = require('metalsmith-watch')
 const serve = require('metalsmith-serve')
 const markdown = require('metalsmith-markdown')
 const partial = require('metalsmith-partial')
+const metallic = require('metalsmith-metallic')
 
 metalsmith(__dirname)
+    .use(metallic())
     .use(serve({}))
     .use(markdown())
     .use(watch({

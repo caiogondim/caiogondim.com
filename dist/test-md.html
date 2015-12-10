@@ -31,13 +31,13 @@
         font-size: 20px;
       }
     
-      code {
+      /*code {
         border: 1px solid rgb(221, 221, 221);
         border-radius: 3px;
         font-size: 18px;
         padding: 2px;
         white-space: nowrap;
-      }
+      }*/
     
       a, a:visited {
         color: #4848FF;
@@ -116,6 +116,82 @@
           display: inline;
       }
       /* END Footer */
+    
+      /* ------- */
+      /*
+    
+      /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+    
+      /* Tomorrow Comment */
+      .hljs-comment,
+      .hljs-quote {
+        color: #8e908c;
+      }
+    
+      /* Tomorrow Red */
+      .hljs-variable,
+      .hljs-template-variable,
+      .hljs-tag,
+      .hljs-name,
+      .hljs-selector-id,
+      .hljs-selector-class,
+      .hljs-regexp,
+      .hljs-deletion {
+        color: #c82829;
+      }
+    
+      /* Tomorrow Orange */
+      .hljs-number,
+      .hljs-built_in,
+      .hljs-builtin-name,
+      .hljs-literal,
+      .hljs-type,
+      .hljs-params,
+      .hljs-meta,
+      .hljs-link {
+        color: #f5871f;
+      }
+    
+      /* Tomorrow Yellow */
+      .hljs-attribute {
+        color: #eab700;
+      }
+    
+      /* Tomorrow Green */
+      .hljs-string,
+      .hljs-symbol,
+      .hljs-bullet,
+      .hljs-addition {
+        color: #718c00;
+      }
+    
+      /* Tomorrow Blue */
+      .hljs-title,
+      .hljs-section {
+        color: #4271ae;
+      }
+    
+      /* Tomorrow Purple */
+      .hljs-keyword,
+      .hljs-selector-tag {
+        color: #8959a8;
+      }
+    
+      .hljs {
+        display: block;
+        overflow-x: auto;
+        background: white;
+        color: #4d4d4c;
+        padding: 2em 0;
+      }
+    
+      .hljs-emphasis {
+        font-style: italic;
+      }
+    
+      .hljs-strong {
+        font-weight: bold;
+      }  /* ------- */
     </style>
 </head>
 <body>
@@ -152,6 +228,11 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum.</p>
+<pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testRe</span><span class="hljs-params">(re, lexeme)</span> </span>{
+  <span class="hljs-keyword">var</span> match = re &amp;&amp; re.exec(lexeme);
+  <span class="hljs-keyword">return</span> match &amp;&amp; match.index == <span class="hljs-number">0</span>;
+}</code></pre>
+
 <blockquote>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
