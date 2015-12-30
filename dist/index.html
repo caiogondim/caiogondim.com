@@ -6,9 +6,37 @@
     <link rel="icon" type="image/png" href="/favicon-96x96.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      body{
-          color: #333;
+    
+      html {font-size: 1.25em;}
+    
+      body {
+      background-color: white;
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      line-height: 1.45;
+      color: #333;
       }
+    
+      p {margin-bottom: 1.3em;}
+    
+      h1, h2, h3, h4 {
+      margin: 1.414em 0 0.5em;
+      font-weight: inherit;
+      line-height: 1.2;
+      }
+    
+      h1 {
+      margin-top: 0;
+      font-size: 3.157em;
+      }
+    
+      h2 {font-size: 2.369em;}
+    
+      h3 {font-size: 1.777em;}
+    
+      h4 {font-size: 1.333em;}
+    
+      small, .font_small {font-size: 0.75em;}
     
       .container {
           max-width: 800px;
@@ -20,15 +48,12 @@
       }
     
       hr {
-          margin: 30px 0;
-          border-top: 1px solid;
-          border-bottom: none;
-          border-right: none;
-          border-left: none;
-      }
-    
-      small {
-        font-size: 20px;
+        clear: both;
+        border: none;
+        border-bottom: 1px solid #d9d9d9;
+        height: 0;
+        margin: 2.6em 0;
+        padding: 0;
       }
     
       /*code {
@@ -65,7 +90,6 @@
     
       /* BEGIN post */
       .post {
-          font-size: 20px;
           margin-top: 20px;
       }
       .post h3 {
@@ -105,7 +129,6 @@
       /* BEGIN Footer */
       .footer {
         text-align: center;
-        font-size: 20px;
       }
       .footer__list {
           list-style: none;
@@ -198,9 +221,9 @@
     <div class="container">
         <div class="header">
             <img class="header__logo" src="logo.png" alt="Caio Gondim logo" />
-            <h1 class="header__title">
+            <h2 class="header__title">
                 <a href="/">Caio Gondim</a>
-            </h1>
+            </h2>
             <small class="header__subtitle">about software, human-computer interface, photography and life</small>
             <div class="footer">
                 <ul class="footer__list">
