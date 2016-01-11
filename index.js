@@ -13,13 +13,13 @@ const permalinks = require('metalsmith-permalinks')
 metalsmith(__dirname)
   .source('./src')
   .destination('./dist')
-  .use(markdown())
-  .use(metallic())
   .use(collections({
     posts: {
-      pattern: 'posts/**'
+      pattern: 'posts/*.md'
     }
   }))
+  .use(markdown())
+  .use(metallic())
   .use(permalinks({
     linksets: [{
       match: {collection: 'posts'},
