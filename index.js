@@ -7,23 +7,37 @@ const serve = require('metalsmith-serve')
 const markdown = require('metalsmith-markdown')
 const partial = require('metalsmith-partial')
 const metallic = require('metalsmith-metallic')
+const collections = require('metalsmith-collections')
+const permalinks = require('metalsmith-permalinks')
 
 metalsmith(__dirname)
-    .use(metallic())
-    .use(serve({}))
-    .use(markdown())
-    .use(watch({
-      paths: {
-        "${source}/**/*": true,
-        "layouts/*": true,
-        "partials/*": true
-      }
-    }))
-    .use(layouts({
-      engine: 'handlebars',
-      partials: './partials'
-    }))
-    .destination('./dist')
-    .build((error) => {
-      if (error) throw error;
-    })
+  .source('./src')
+  .destination('./dist')
+  .use(markdown())
+  .use(metallic())
+  .use(collections({
+    posts: {
+      pattern: 'posts/**'
+    }
+  }))
+  .use(permalinks({
+    linksets: [{
+      match: {collection: 'posts'},
+      pattern: 'posts/:title'
+    }]
+  }))
+  .use(layouts({
+    engine: 'handlebars',
+    partials: './partials'
+  }))
+  .use(serve({}))
+  .use(watch({
+    paths: {
+      "${source}/**/*": true,
+      "layouts/*": true,
+      "partials/*": true
+    }
+  }))
+  .build((error) => {
+    if (error) throw error;
+  })
