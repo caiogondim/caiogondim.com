@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict'
 
 var metalsmith = require('metalsmith')
@@ -11,8 +12,8 @@ const collections = require('metalsmith-collections')
 const permalinks = require('metalsmith-permalinks')
 
 metalsmith(__dirname)
-  .source('./src')
-  .destination('./dist')
+  .source('../src')
+  .destination('../dist')
   .use(collections({
     posts: {
       pattern: 'posts/*.md'
@@ -28,14 +29,15 @@ metalsmith(__dirname)
   }))
   .use(layouts({
     engine: 'handlebars',
-    partials: './partials'
+    directory: '../layouts',
+    partials: '../partials'
   }))
   .use(serve({}))
   .use(watch({
     paths: {
       "${source}/**/*": true,
-      "layouts/*": true,
-      "partials/*": true
+      "../layouts/*": true,
+      "../partials/*": true
     }
   }))
   .build((error) => {
