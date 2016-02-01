@@ -18,8 +18,8 @@ metalsmith(__dirname)
       pattern: 'posts/*.md'
     }
   }))
-  .use(markdown())
   .use(metallic())
+  .use(markdown())
   .use(permalinks({
     linksets: [{
       match: {collection: 'posts'},
