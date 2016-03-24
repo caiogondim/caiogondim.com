@@ -1,2 +1,6 @@
 [x] Separate CSS
-[ ] Infra for creating post on markdown
+[x] Infra for creating post on markdown
+[ ] Correct post URL
+[ ] Syntax highlight
+[ ] Disqus comments
+[ ] Add schema.org markup
