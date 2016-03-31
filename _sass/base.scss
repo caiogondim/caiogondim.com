@@ -1,3 +1,6 @@
+// TODO: Separate native elements between artificial ones
+// TODO: organize sass in page and components folders
+
 html {font-size: 1.25em;}
 
 body {
@@ -37,6 +40,10 @@ small, .font_small {font-size: 0.75em;}
     position: relative;
     padding: 1em;
     line-height: 1.5;
+}
+
+.row {
+  display: block;
 }
 
 hr {

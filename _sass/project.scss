@@ -1,0 +1,11 @@
+.project__img-container {
+  height: 300px;
+  margin: 0 0 2.6em 0;
+}
+
+.project__img {
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
