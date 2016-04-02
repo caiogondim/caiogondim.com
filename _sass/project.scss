@@ -1,10 +1,12 @@
 .project__img-container {
-  height: 300px;
+  height: 256px;
   margin: 0 0 2.6em 0;
 }
 
 .project__img {
-  width: 300px;
+  max-width: 256px;
+  height: 256px;
+  max-height: 256px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
