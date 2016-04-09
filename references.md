@@ -4,3 +4,4 @@ Some websites I used (or pretend to use) as inspiration:
 - http://peterdowns.com/
 - https://www.rust-lang.org/
 - http://type-scale.com/
+- http://markdotto.com/
