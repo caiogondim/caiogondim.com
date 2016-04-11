@@ -1,3 +1,5 @@
+<img src="http://rawgit.com/caiogondim/caiogondim.com/master/img/github-banner.png" width="100%" />
+
 # caiogondim.com
 
 My blog
