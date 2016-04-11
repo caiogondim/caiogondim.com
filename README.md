@@ -16,3 +16,15 @@ bundle install
 ```bash
 bundle exec jekyll serve
 ```
+
+## Deploy
+
+To staging server:
+```bash
+./_tasks/deploy-staging
+```
+
+To production server:
+```bash
+./_tasks/deploy
+```
