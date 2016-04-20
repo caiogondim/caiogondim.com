@@ -5,3 +5,4 @@ Some websites I used (or pretend to use) as inspiration:
 - https://www.rust-lang.org/
 - http://type-scale.com/
 - http://markdotto.com/
+- https://www.bramstein.com/writing/detecting-system-fonts-without-flash.html
