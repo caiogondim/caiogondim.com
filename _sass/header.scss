@@ -11,6 +11,21 @@
 .header__title {
     margin-top: 0.4em;
     margin-bottom: 0;
+
+    // Downgrades to h2 style
+    @media (max-width: 400px) {
+      font-size: 2.369em;
+    }
+
+    // Downgrades to h3 style
+    @media (max-width: 300px) {
+      font-size: 1.777em;
+    }
+
+    // Downgrades to h4 style
+    @media (max-width: 250px) {
+      font-size: 1.333em;
+    }
 }
 
 .header__subtitle {
