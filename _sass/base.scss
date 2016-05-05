@@ -1,7 +1,10 @@
 // TODO: Separate native elements between artificial ones
 // TODO: organize sass in page and components folders
 
-html {font-size: 1.25em;}
+html {
+  font-size: 1.25em;
+  height: 100%;
+}
 
 body {
 background-color: white;
@@ -10,6 +13,7 @@ font-weight: 400;
 line-height: 1.45;
 color: #333;
 margin: 0;
+height: 100%;
 }
 
 p {margin-bottom: 1.3em;}
@@ -36,10 +40,21 @@ small, .font_small {font-size: 0.75em;}
 .container {
     max-width: 800px;
     left: 50%;
+    top: 0;
     transform: translateX(-50%);
     position: relative;
     padding: 1em;
     line-height: 1.5;
+
+    &.page-index {
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (max-width: 500px) and (max-height: 700px) {
+        top: 0;
+        transform: translateX(-50%);
+      }
+    }
 }
 
 .row {

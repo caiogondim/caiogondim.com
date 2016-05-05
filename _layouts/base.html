@@ -2,7 +2,12 @@
 <html>
   {% include head.html %}
   <body>
-    <div class="container">
+    <div
+      class="
+        container
+        page-{{page.slug}}
+      "
+    >
       {{ content }}
     </div>
 
