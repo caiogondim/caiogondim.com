@@ -50,7 +50,7 @@ small, .font_small {font-size: 0.75em;}
       top: 50%;
       transform: translate(-50%, -50%);
 
-      @media (max-width: 500px) and (max-height: 700px) {
+      @media (max-width: 500px), (max-height: 750px) {
         top: 0;
         transform: translateX(-50%);
       }
