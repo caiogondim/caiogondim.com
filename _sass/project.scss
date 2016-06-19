@@ -5,6 +5,8 @@
 
 .project__img {
   max-height: 256px;
+  height: 100%;
+  max-width: 100%;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
