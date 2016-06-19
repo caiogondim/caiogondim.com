@@ -13,10 +13,13 @@ slug: posts
 {% for post in site.posts %}
   <div class="post">
     <div class="post__header">
-      <a href="{{ post.url }}"><h1 class="post__title">{{ post.title }}</h1></a>
+      <h1 class="post__title">{{ post.title }}</h1>
       <small class="post__date">{{ post.date | date: '%B %d, %Y' }}</small>
     </div>
     {{ post.summary }}
+    <p class="post__read-more">
+      <a href="{{ post.url }}">Read more</a>
+    </p>
   </div>
   <hr />
 {% endfor %}
