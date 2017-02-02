@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -e # exit when error
-
-# rsync
-rsync -avz --delete --stats -e ssh ./_site/ caiogondim@caiogondim.com:~/staging.caiogondim.com/
