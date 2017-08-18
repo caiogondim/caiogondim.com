@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "next build && next start -p $PORT",
     "dev": "next",
-    "build": "next build"
+    "build": "next build",
+    "deploy": "gcloud app deploy"
   },
   "repository": {
     "type": "git",
