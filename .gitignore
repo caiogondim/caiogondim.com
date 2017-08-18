@@ -1,6 +1,1 @@
-_site
-.sass-cache
-.jekyll-metadata
-
-# bundler folder installation
-_vendor
+node_modules/
