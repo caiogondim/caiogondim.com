@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/caiogondim/caiogondim.com#readme",
   "dependencies": {
-    "next": "3.0.6"
-  },
-  "devDependencies": {
+    "next": "3.0.6",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   }
