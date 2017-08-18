@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "next start",
+    "dev": "next",
+    "build": "next build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/caiogondim/caiogondim.com/issues"
   },
-  "homepage": "https://github.com/caiogondim/caiogondim.com#readme"
+  "homepage": "https://github.com/caiogondim/caiogondim.com#readme",
+  "dependencies": {
+    "next": "3.0.6"
+  },
+  "devDependencies": {
+    "react": "15.6.1",
+    "react-dom": "15.6.1"
+  }
 }
