@@ -17,3 +17,9 @@ section {
   margin-bottom: 0;
   color: #c0bfc0;
 }
+
+::selection {
+  filter: invert(100%);
+  background-color: #343334;
+  color: white;
+}
