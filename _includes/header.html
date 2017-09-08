@@ -1,0 +1,15 @@
+<section class="header">
+  <div class="u-legible-width">
+    <header>
+      {% if page.title %}
+        <a href="/">
+          <h1><img src="./assets/logo.svg" class="header__logo" /></h1>
+          <h6 class="header__logo-text">/ {{ page.title }}</h6>
+        </a>
+      {% else %}
+        <h1><img src="./assets/logo.svg" class="header__logo" /></h1>
+        <h6 class="header__logo-text">CAIO GONDIM</h6>
+      {% endif %}
+    </header>
+  </div>
+</section>

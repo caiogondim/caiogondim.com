@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  padding-top: 0;
+  max-width: 66rem;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header__logo {
+  width: 3.052rem;
+}
+
+.header__logo-text {
+  display: block;
+  color: #777677;
+  font-weight: bold;
+  margin-top: -1rem;
+  margin-bottom: 1.953rem;
+  text-transform: uppercase;
+}

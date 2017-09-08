@@ -1,0 +1,19 @@
+body {
+  padding: 1.953rem;
+}
+
+@media (min-width: 40.0rem) and (min-height: 40.0rem) {
+  body {
+    padding: 5.96rem 4.768rem 4.768rem 4.768rem;
+  }
+}
+
+section {
+  display: flex;
+  margin: 0 0 3.815rem 0;
+}
+
+.date {
+  margin-bottom: 0;
+  color: #c0bfc0;
+}
