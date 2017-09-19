@@ -1,5 +1,6 @@
 body {
-  padding: 1.953rem;
+  padding: 1rem;
+  max-width: 100%;
 }
 
 @media (min-width: 40.0rem) and (min-height: 40.0rem) {
@@ -9,8 +10,12 @@ body {
 }
 
 section {
-  display: flex;
+  // display: flex;
   margin: 0 0 3.815rem 0;
+}
+
+section:last-child {
+  margin: 0;
 }
 
 .date {

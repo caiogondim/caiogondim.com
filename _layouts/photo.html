@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <style>
+    .photo__container {
+      /*display: flex;*/
+    }
+
+    .photo__item {
+      flex-basis: 100%;
+      color: #777677;
+    }
+
+    .photo__item img {
+      max-width: 100%;
+      width: 100%;
+      max-height: 100vh;
+      background-color: #f3f3f3;
+    }
+  </style>
+
+  <section>
+    <div class="photo__container">
+      <h6 class="u-separator">{{ page.album }}</h6>
+      <div class="photo__item">
+        <img src="{{ page.src }}" alt="{{ page.alt }}" />
+      </div>
+    </div>
+  </section>
+</body>
+</html>
