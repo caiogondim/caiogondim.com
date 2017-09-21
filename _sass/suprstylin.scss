@@ -327,27 +327,33 @@ blockquote {
 /* List
 ––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: disc inside;
+  list-style: disc outside;
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal outside;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
 
+p + ul,
+p + ol {
+  margin-top: -1.25rem;
+}
+
 li {
-  // margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 /* Util
 ––––––––––––––––––––––––––––––––– */
 .u-legible-width {
-  max-width: 50ch;
+  max-width: 66ch;
   width: 100%;
 }
 
@@ -358,6 +364,6 @@ li {
 .u-separator {
   border-top: 2px solid #343334;
   padding-top: 0.5rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
