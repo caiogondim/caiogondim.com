@@ -1,16 +1,9 @@
 body {
-  padding: 1rem;
+  padding: calc((100vw / 25) * 1.563);
   max-width: 100%;
 }
 
-@media (min-width: 40.0rem) and (min-height: 40.0rem) {
-  body {
-    padding: 5.96rem 4.768rem 4.768rem 4.768rem;
-  }
-}
-
 section {
-  // display: flex;
   margin: 0 0 3.815rem 0;
 }
 
