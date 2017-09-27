@@ -9,6 +9,7 @@ url: "https://caiogondim.com" # the base hostname & protocol for your site, e.g.
 twitter_username: caio_gondim
 github_username:  caiogondim
 permalink: pretty
+highlighter: rouge
 collections:
   photos_2016_nyc:
     output: true
