@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects
+section_title: Projects
 ---
 
 <style>

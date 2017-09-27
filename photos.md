@@ -1,4 +1,4 @@
 ---
 layout: photos
-title: photos
+section_title: photos
 ---

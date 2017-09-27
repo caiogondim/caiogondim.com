@@ -7,17 +7,9 @@
   {% include header.html %}
   <section class="section-typography">
     <div class="container u-readable">
-      <p class="date">September 5th, 2017</p>
-      <h3>Redux and React</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse adipisci quisquam veniam, odio illum sed maiores aspernatur consequuntur excepturi quos! Repellat unde excepturi vitae aut voluptas fugiat voluptatum iusto, quaerat.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse adipisci quisquam veniam, odio illum sed maiores aspernatur consequuntur excepturi quos! Repellat unde excepturi vitae aut voluptas fugiat voluptatum iusto, quaerat.
-      </p>
-      <p>
-        <a href="">Read more...</a>
-      </p>
+      <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+      <h3>{{ page.title }}</h3>
+      {{ content }}
     </div>
   </section>
 </body>

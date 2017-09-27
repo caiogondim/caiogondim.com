@@ -1,6 +1,6 @@
 ---
 layout: default
-title: talks
+section_title: talks
 ---
 
 <style>

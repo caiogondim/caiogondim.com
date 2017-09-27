@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Publications
+section_title: Publications
 ---
 
 <style>
