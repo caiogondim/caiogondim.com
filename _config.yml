@@ -8,18 +8,17 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://caiogondim.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: caio_gondim
 github_username:  caiogondim
-permalink: pretty
-highlighter: rouge
+permalink: /post/:title
 collections:
   photos_2016_nyc:
     output: true
-    permalink: /photos/nyc-2016/:title
+    permalink: /photo/nyc-2016/:title
   photos_2017_nyc:
     output: true
-    permalink: /photos/nyc-2017/:title
+    permalink: /photo/nyc-2017/:title
   photos_2017_times_square:
     output: true
-    permalink: /photos/times-square-2017/:title
+    permalink: /photo/times-square-2017/:title
 
 sass:
   sass_dir: _sass
@@ -27,5 +26,6 @@ sass:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 plugins:
   - jekyll-feed

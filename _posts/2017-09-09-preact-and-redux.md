@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Preact and Redux"
-section_title: Posts
+section_title: Post
 date:   2017-09-16
 long_description: >
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil modi illo, omnis? Itaque nulla, omnis, quis maiores aliquam architecto dolores, illum autem modi sequi ducimus facere placeat. Esse, quod, laudantium.

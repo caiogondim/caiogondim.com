@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-section_title: Posts
+section_title: Post
 date:   2017-09-05 22:11:24 -0400
 categories: jekyll update
 ---
