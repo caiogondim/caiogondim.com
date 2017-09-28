@@ -30,7 +30,7 @@ section_title: talks
 
 <p class="talk__intro">
   I love to give talks and meet awesome people at conferences. If you want to invite me to an event,
-  send me an <a href="mailto:me@caiogondim.com">email</a> and let's be in touch.
+  send me an <a href="mailto:me@caiogondim.com">email</a> and let's get in touch.
 </p>
 
 <h1 class="year-separator">2016</h1>
