@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "JS native face detection"
-section_title: Post
+title: "JS native face detection"
+page_name: POST
 date: 2017-08-10
 long_description: >
   The <code>FaceDetector</code> is part of the
@@ -9,23 +9,6 @@ long_description: >
   currently on the <a href="https://github.com/WICG/shape-detection-api">Web Incubator CG</a>.
   It’s hardware accelerated, uses specialized OS calls when available and don’t use the main thread.
 ---
-
-<style>
-  .talk__video-embed {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-  }
-
-  .talk__video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom:56.25%;
-    margin-bottom: 1rem;
-  }
-</style>
 
 When I first read [Paul Kinlan's blog post](https://paul.kinlan.me/face-detection/) about native
 face detection, the movie Ghost in the Shell was about to be released. I'm a big GitS fan, and was
@@ -35,8 +18,12 @@ I ran to Chrome Canary on macOS to test it and…it didn’t work. It was only w
 the time. But now with `FaceDetector` working reliably in Chrome for macOS, I can finally pretend to
 have some Laughing Man skills.
 
-<div class="talk__video-container">
-  <iframe class="talk__video-embed" src="https://www.youtube.com/embed/I7n8eQDsVSQ?start=67" frameborder="0" allowfullscreen></iframe>
+<div class="component-video-embed">
+  <iframe
+    src="https://www.youtube.com/embed/I7n8eQDsVSQ?start=67"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
 </div>
 
 Face detection was possible before on the web using 3rd party libraries like

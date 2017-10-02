@@ -1,4 +1,4 @@
 ---
 layout: posts
-section_title: posts
+page_name: posts
 ---

@@ -1,14 +1,14 @@
-<section class="header">
+<section class="component-header">
   <div class="u-readable">
     <header>
-      {% if page.section_title %}
+      {% if page.page_name %}
         <a href="/">
-          <h1><img src="/assets/logo.svg" class="header__logo" /></h1>
-          <h6 class="header__logo-text">/ {{ page.section_title }}</h6>
+          <h1><img src="/assets/logo.svg" class="logo" /></h1>
+          <h6 class="logo-text">/ {{ page.page_name }}</h6>
         </a>
       {% else %}
-        <h1><img src="/assets/logo.svg" class="header__logo" /></h1>
-        <h6 class="header__logo-text">CAIO GONDIM</h6>
+        <h1><img src="/assets/logo.svg" class="logo" /></h1>
+        <h6 class="logo-text">CAIO GONDIM</h6>
       {% endif %}
     </header>
   </div>

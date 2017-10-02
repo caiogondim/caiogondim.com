@@ -1,6 +1,6 @@
 ---
 layout: about
-section_title: about
+page_name: about
 ---
 
 I'm a Brazilian software engineer, passionate about web technologies and currently living in New

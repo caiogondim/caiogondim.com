@@ -4,5 +4,5 @@ alt: Manhattan from Top of The Rock
 layout: photo
 previewSrc: /assets/photos/nyc-2017/manhattan-from-top-of-the-rock-preview.jpg
 src: /assets/photos/nyc-2017/manhattan-from-top-of-the-rock.jpg
-section_title: Photo
+page_name: Photo
 ---

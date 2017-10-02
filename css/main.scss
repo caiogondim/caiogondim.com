@@ -3,6 +3,14 @@
 @import 'suprstylin.scss';
 @import 'syntax-highlight.scss';
 @import 'global.scss';
-@import 'header.scss';
-@import 'nav.scss';
-@import 'pages/photos.scss'
+
+@import 'components/header.scss';
+@import 'components/intro.scss';
+@import 'components/section-header.scss';
+@import 'components/video-embed.scss';
+
+@import 'pages/index.scss';
+@import 'pages/photos.scss';
+@import 'pages/post.scss';
+@import 'pages/posts.scss';
+@import 'pages/talks.scss';

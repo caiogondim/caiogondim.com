@@ -3,12 +3,14 @@
 <head>
   {% include head.html %}
 </head>
-<body>
+<body class="page-post">
   {% include header.html %}
   <section class="section-typography">
     <div class="container u-readable">
-      <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
-      <h3>{{ page.title }}</h3>
+      <div class="component-section-header">
+        <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+        <h3>{{ page.title }}</h3>
+      </div>
       {{ content }}
     </div>
   </section>
