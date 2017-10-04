@@ -1,11 +1,11 @@
 .component-section-header {
   h3 a {
     text-decoration: none;
+    color: initial;
   }
 
   h3 a:hover {
     text-decoration: underline;
-    text-decoration-color: #d8d8d8;
   }
 
   .date {
