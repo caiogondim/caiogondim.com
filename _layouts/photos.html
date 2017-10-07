@@ -6,41 +6,11 @@
 <body class="page-photos">
   {% include header.html %}
 
-  <style>
-    .photos__collection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .photos__item {
-      flex-basis: 100%;
-      color: #777677;
-      margin-bottom: 1rem;
-    }
-
-    .photos__item img {
-      background-color: #f3f3f3;
-      max-width: 100%;
-    }
-
-    .photos__item a {
-      display: block;
-      line-height: 0;
-    }
-
-    @media (min-width: 40.0rem) and (min-height: 40.0rem) {
-      .photos__item {
-        flex-basis: calc(50% - 0.5rem);
-      }
-    }
-  </style>
-
   <section>
-    <div class="photos__collection">
+    <div class="collection">
       <h6 class="u-separator">Times Square / 2017</h6>
       {% for photo in site.photos_2017_times_square %}
-        <div class="photos__item">
+        <div class="item">
           <a href="{{ photo.url }}">
             <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
           </a>
@@ -50,10 +20,10 @@
   </section>
 
   <section>
-    <div class="photos__collection">
+    <div class="collection">
       <h6 class="u-separator">New York / 2017</h6>
       {% for photo in site.photos_2017_nyc %}
-        <div class="photos__item">
+        <div class="item">
           <a href="{{ photo.url }}">
             <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
           </a>
@@ -63,10 +33,10 @@
   </section>
 
   <section>
-    <div class="photos__collection">
+    <div class="collection">
       <h6 class="u-separator">New York City / 2016</h6>
       {% for photo in site.photos_2016_nyc %}
-        <div class="photos__item">
+        <div class="item">
           <a href="{{ photo.url }}">
             <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
           </a>
@@ -77,13 +47,11 @@
 
   <section>
     <h6 class="u-separator">More</h6>
-    <p>
-      You can check more photos of mine on:
-      <ul>
-        <li><a href="https://instagram.com/caiogondim" target="_blank">Instagram</a></li>
-        <li><a href="https://500px.com/caiogondim" target="_blank">500px</a></li>
-      </ul>
-    </p>
+    <p>You can check more photos of mine on:</p>
+    <ul>
+      <li><a href="https://instagram.com/caiogondim" target="_blank">Instagram</a></li>
+      <li><a href="https://500px.com/caiogondim" target="_blank">500px</a></li>
+    </ul>
   </section>
 </body>
 </html>

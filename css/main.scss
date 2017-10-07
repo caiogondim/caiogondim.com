@@ -4,11 +4,13 @@
 @import 'syntax-highlight.scss';
 @import 'global.scss';
 
+@import 'components/content.scss';
 @import 'components/header.scss';
 @import 'components/intro.scss';
 @import 'components/section-header.scss';
 @import 'components/video-embed.scss';
 
+@import 'pages/about.scss';
 @import 'pages/index.scss';
 @import 'pages/photos.scss';
 @import 'pages/post.scss';
