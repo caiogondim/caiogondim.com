@@ -5,4 +5,4 @@ build:
 	bundler exec jekyll build
 
 dev:
-	bundler exec jekyll build --watch
+	bundler exec jekyll server
