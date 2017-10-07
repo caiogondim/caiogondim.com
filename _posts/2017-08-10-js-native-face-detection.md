@@ -128,10 +128,12 @@ The `detect` method returns an array of `DetectedFaces` objects. `DetectFace` is
 `boundingBox` and `landmarks` keys. `boundingBox` describes a square related to the detected faced.
 `landmark` is an array of places of interest on the detected face like eye, mouth, …
 
-<img
-  src="/assets/posts/2017-08-10-js-native-face-detection/detected-faces-object.png"
-  alt="DetectedFaces object"
-/>
+<div class="img-container">
+  <img
+    src="/assets/posts/2017-08-10-js-native-face-detection/detected-faces-object.png"
+    alt="DetectedFaces object"
+  />
+</div>
 
 With that information, we can now put an image on top of the detected face.
 

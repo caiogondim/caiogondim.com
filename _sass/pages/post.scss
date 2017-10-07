@@ -1,11 +1,16 @@
 .page-post {
   video {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
 
-  p > img {
+  .img-container > img {
     width: 100%;
+  }
+
+  .img-container {
+    line-height: 0;
+    margin-bottom: 1.25rem;
   }
 
   p > code {
