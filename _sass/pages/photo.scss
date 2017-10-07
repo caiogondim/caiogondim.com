@@ -1,0 +1,13 @@
+.page-photo {
+  .item {
+    flex-basis: 100%;
+    color: #777677;
+  }
+
+  .item img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100vh;
+    background-color: #f3f3f3;
+  }
+}
