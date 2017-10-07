@@ -26,14 +26,16 @@ have some Laughing Man skills.
   ></iframe>
 </div>
 
-Face detection was possible before on the web using 3rd party libraries like
-[Tracking.js](https://trackingjs.com/), but without hardware acceleration **and** sharing the same
-thread for user interaction and object detection can make the experience a bit janky.
+Face detection was already possible on the web through 3rd party libraries like
+[Tracking.js](https://trackingjs.com/). But sharing the same
+thread for user interaction **and** object detection plus the lack of hardware acceleration makes
+the experience a bit janky.
 
 The `FaceDetector` is part of the
 [Shape Detection API](https://wicg.github.io/shape-detection-api/#face-detection-api), currently on
-the [Web Incubator CG](https://github.com/WICG/shape-detection-api). It’s hardware accelerated, uses specialized OS calls when available and don’t
-use the main thread.
+the [Web Incubator CG](https://github.com/WICG/shape-detection-api). It’s hardware accelerated,
+uses specialized OS calls when available and doesn't
+run on the main thread.
 
 ###### Enabling the API
 
