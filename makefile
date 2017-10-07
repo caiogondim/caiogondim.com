@@ -1,5 +1,5 @@
 deploy:
-	rsync -avz --stats -e ssh _site/ caiogondim@caiogondim.com:~/caiogondim.com/
+	rsync -avz --stats --delete -e ssh _site/ caiogondim@caiogondim.com:~/caiogondim.com/
 
 build:
 	bundler exec jekyll build
