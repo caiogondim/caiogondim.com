@@ -1,0 +1,12 @@
+.component-section-break {
+  border: 0;
+
+  &::before {
+    content: "...";
+    letter-spacing: 0.64rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+}

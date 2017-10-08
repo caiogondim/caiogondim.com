@@ -1,4 +1,4 @@
-deploy:
+deploy: build
 	rsync -avz --stats --delete -e ssh _site/ caiogondim@caiogondim.com:~/caiogondim.com/
 
 build:
