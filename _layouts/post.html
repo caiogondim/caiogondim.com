@@ -6,16 +6,16 @@
 <body class="page-post">
   {% include header.html %}
 
-  <main>
-    <section class="section-typography">
-      <div class="container u-readable">
-        <div class="component-section-header">
-          <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
-          <h3>{{ page.title }}</h3>
-        </div>
-        {{ content }}
+  <section class="section-typography">
+    <div class="container u-readable">
+      <div class="component-section-header">
+        <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+        <h3>{{ page.title }}</h3>
       </div>
-    </section>
-  </main>
+      <main>
+        {{ content }}
+      </main>
+    </div>
+  </section>
 </body>
 </html>
