@@ -5,14 +5,17 @@
 </head>
 <body class="page-post">
   {% include header.html %}
-  <section class="section-typography">
-    <div class="container u-readable">
-      <div class="component-section-header">
-        <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
-        <h3>{{ page.title }}</h3>
+
+  <main>
+    <section class="section-typography">
+      <div class="container u-readable">
+        <div class="component-section-header">
+          <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+          <h3>{{ page.title }}</h3>
+        </div>
+        {{ content }}
       </div>
-      {{ content }}
-    </div>
-  </section>
+    </section>
+  </main>
 </body>
 </html>

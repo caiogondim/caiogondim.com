@@ -6,52 +6,54 @@
 <body class="page-photos">
   {% include header.html %}
 
-  <section>
-    <div class="collection">
-      <h6 class="u-separator">Times Square / 2017</h6>
-      {% for photo in site.photos_2017_times_square %}
-        <div class="item">
-          <a href="{{ photo.url }}">
-            <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+  <main>
+    <section>
+      <div class="collection">
+        <h6 class="u-separator">Times Square / 2017</h6>
+        {% for photo in site.photos_2017_times_square %}
+          <div class="item">
+            <a href="{{ photo.url }}">
+              <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-  <section>
-    <div class="collection">
-      <h6 class="u-separator">New York / 2017</h6>
-      {% for photo in site.photos_2017_nyc %}
-        <div class="item">
-          <a href="{{ photo.url }}">
-            <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+    <section>
+      <div class="collection">
+        <h6 class="u-separator">New York / 2017</h6>
+        {% for photo in site.photos_2017_nyc %}
+          <div class="item">
+            <a href="{{ photo.url }}">
+              <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-  <section>
-    <div class="collection">
-      <h6 class="u-separator">New York City / 2016</h6>
-      {% for photo in site.photos_2016_nyc %}
-        <div class="item">
-          <a href="{{ photo.url }}">
-            <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+    <section>
+      <div class="collection">
+        <h6 class="u-separator">New York City / 2016</h6>
+        {% for photo in site.photos_2016_nyc %}
+          <div class="item">
+            <a href="{{ photo.url }}">
+              <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
-  <section>
-    <h6 class="u-separator">More</h6>
-    <p>You can check more photos of mine on:</p>
-    <ul>
-      <li><a href="https://instagram.com/caiogondim" target="_blank">Instagram</a></li>
-      <li><a href="https://500px.com/caiogondim" target="_blank">500px</a></li>
-    </ul>
-  </section>
+    <section>
+      <h6 class="u-separator">More</h6>
+      <p>You can check more photos of mine on:</p>
+      <ul>
+        <li><a href="https://instagram.com/caiogondim" target="_blank">Instagram</a></li>
+        <li><a href="https://500px.com/caiogondim" target="_blank">500px</a></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
