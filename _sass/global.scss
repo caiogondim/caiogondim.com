@@ -29,4 +29,9 @@ main {
       opacity: 1;
     }
   }
+
+  &.from-back-forward-cache {
+    opacity: 1;
+    animation: none;
+  }
 }
