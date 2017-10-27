@@ -11,6 +11,10 @@ section:last-child {
   margin: 0;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 ::selection {
   filter: invert(100%);
   background-color: #343334;
