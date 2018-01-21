@@ -19,6 +19,9 @@ collections:
   photos_2017_times_square:
     output: true
     permalink: /photo/times-square-2017/:title
+  photos_2017_mauna_kea_observatories:
+    output: true
+    permalink: /photo/mauna-kea-observatories-2017/:title
 
 sass:
   sass_dir: _sass
