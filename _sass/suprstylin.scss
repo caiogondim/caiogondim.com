@@ -2,21 +2,20 @@
 ––––––––––––––––––––––––––––––––– */
 
 /*
-3.815
-3.052
-2.441
-1.953
-1.563
-1.25
-1
-0.8
-0.64
-0.512
-0.41
-0.328
-0.262
-0.209
-0.1672
+3.815rem
+3.052rem
+2.441rem
+1.953rem
+1.563rem
+1.25rem
+1rem
+0.8rem
+0.64rem
+0.512rem
+0.41rem
+0.328rem
+0.262rem
+0.209rem
 */
 
 /* Root
@@ -29,7 +28,7 @@
 }
 
 html {
-  font-size: calc(1rem + 2px + ((100vw - 400px) / 250));
+  font-size: calc(1rem + 2px + ((100vw - 600px) / 250));
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -45,13 +44,14 @@ html {
     sans-serif;
   margin: 0;
   padding: 0;
+  text-decoration-skip-ink: 'auto';
 }
 
 body {
   padding: 0;
   margin: calc((100vw / 25) * 1.563);
   background-color: white;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.563;
   color: #343334;
 }
