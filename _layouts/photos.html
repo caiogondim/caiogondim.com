@@ -9,6 +9,19 @@
   <main>
     <section>
       <div class="collection">
+        <h6 class="u-separator">Hawaii / 2017</h6>
+        {% for photo in site.photos-2017-hawaii %}
+          <div class="item">
+            <a href="{{ photo.url }}">
+              <img src="{{ photo.previewSrc }}" alt="{{ photo.alt }}" />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section>
+      <div class="collection">
         <h6 class="u-separator">Mauna Kea Observatories / 2017</h6>
         {% for photo in site.photos_2017_mauna_kea_observatories %}
           <div class="item">
