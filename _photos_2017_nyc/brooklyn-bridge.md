@@ -1,5 +1,6 @@
 ---
-album: New York / 2017
+album: New York
+year: 2017
 alt: Brooklyn bridge
 layout: photo
 previewSrc: /assets/photos/nyc-2017/brooklyn-bridge-preview.jpg

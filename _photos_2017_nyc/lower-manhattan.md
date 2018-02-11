@@ -1,5 +1,6 @@
 ---
-album: New York / 2017
+album: New York
+year: 2017
 alt: Lower Manhattan
 layout: photo
 previewSrc: /assets/photos/nyc-2017/lower-manhattan-preview.jpg

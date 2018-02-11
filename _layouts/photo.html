@@ -9,7 +9,9 @@
   <main>
     <section>
       <div class="container">
-        <h6 class="u-separator">{{ page.album }}</h6>
+        <h6 class="u-separator">
+          {{ page.alt }} <span class="year">{{ page.album }}</span>
+        </h6>
         <div class="item">
           <div>
             <img src="{{ page.src }}" alt="{{ page.alt }}" />

@@ -1,4 +1,15 @@
 .page-photo {
+  .u-separator {
+    position: relative;
+  }
+
+  .year {
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    color: #c0bfc0;
+  }
+
   .item {
     flex-basis: 100%;
     color: #777677;
