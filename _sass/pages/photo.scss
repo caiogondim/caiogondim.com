@@ -13,6 +13,7 @@
   .item {
     flex-basis: 100%;
     color: #777677;
+    margin-bottom: 1rem;
   }
 
   .item div {
@@ -29,5 +30,10 @@
     top: 0;
     left: 0;
     font-size: 0; // Prevent alt text to be shown while img is loading
+  }
+
+  .description {
+    color: #c0bfc0;
+    text-align: right;
   }
 }

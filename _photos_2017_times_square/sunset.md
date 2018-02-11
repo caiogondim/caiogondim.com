@@ -6,4 +6,9 @@ layout: photo
 album: Times Square
 year: 2017
 alt: Sunset
+camera: Nikon D5300
+iso: ISO 100
+focalLength: 20mm
+aperture: ƒ/1.8
+shutterSpeed: 1/200 sec
 ---
