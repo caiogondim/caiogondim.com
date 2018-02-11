@@ -5,6 +5,23 @@
     justify-content: space-between;
   }
 
+  .u-separator {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+
+  .year {
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    color: #c0bfc0;
+  }
+
   .item {
     flex-basis: 100%;
     color: #777677;
