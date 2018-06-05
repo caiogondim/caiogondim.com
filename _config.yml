@@ -6,23 +6,23 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://caiogondim.com"
 twitter_username: caio_gondim
 github_username: caiogondim
-permalink: /post/:title
+permalink: /post/:title:output_ext
 collections:
   photos_2016_nyc:
     output: true
-    permalink: /photo/nyc-2016/:title
+    permalink: /photo/nyc-2016/:title:output_ext
   photos_2017_nyc:
     output: true
-    permalink: /photo/nyc-2017/:title
+    permalink: /photo/nyc-2017/:title:output_ext
   photos_2017_times_square:
     output: true
-    permalink: /photo/times-square-2017/:title
+    permalink: /photo/times-square-2017/:title:output_ext
   photos_2017_mauna_kea_observatories:
     output: true
-    permalink: /photo/mauna-kea-observatories-2017/:title
+    permalink: /photo/mauna-kea-observatories-2017/:title:output_ext
   photos-2017-hawaii:
     output: true
-    permalink: /photo/hawaii-2017/:title
+    permalink: /photo/hawaii-2017/:title:output_ext
 
 sass:
   sass_dir: _sass
