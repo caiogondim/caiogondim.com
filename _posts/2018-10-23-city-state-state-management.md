@@ -2,7 +2,7 @@
 layout: post
 title: State management with city-state
 page_name: POST
-date: 2018-10-16
+date: 2018-10-23
 published: true
 long_description: >
   Everybody is creating a state management library. I had to create mine as well.
@@ -16,10 +16,13 @@ making it harder, faster, better, stronger, ...
 I was proud of almost all decisions I took during those almost 2
 years. But one never felt right: **using Redux for state management**.
 
+> This is a purely anedoctal experience. I'm not saying that using Redux is
+> wrong per se. It just didn't fit my mental model and use case.
+
 Using Redux was better than using no state management solution, but I always had
 this feeling deep inside that it was the wrong approach. Too verbose and with
 it's own idioms that didn't play well with native syntax like async/await and
-error handling. But I drank the cool-aid.
+error handling. But I drank the Kool-Aid.
 
 After 1.5 years after first implementing it on the multimedia player I can
 better look in retrospect and see what went well, what didn't, and why I ended
@@ -33,7 +36,8 @@ possible state transitions.
 
 ###### Tooling is amazing
 
-That was probably what got my attention at first with Redux. The redux-devtool
+That was probably what got my attention at first with Redux. The
+[redux-devtool](https://github.com/zalmoxisus/redux-devtools-extension) extension
 was a really game changer for our team, since the player is a super stateful
 application.
 
@@ -69,18 +73,24 @@ things done and it was ... boring.
 
 <hr class="component-section-break" />
 
-###### city-state: my take on state management
+<div class="img-container">
+  <img
+    src="/assets/posts/2018-10-23-city-state-state-management/city-state-logo.svg"
+    alt="JavaScript errors on AirBnB checkout process"
+  />
+</div>
+
+###### [city-state](https://github.com/caiogondim/city-state.js): my take on state management
 
 Necessity being the mother of invention and me being the great wheel reinventer
 both made me decide to take a shot on that state management thing. My
 constraints were:
 
 - Has to be backwards compatible with Redux (I can't afford to rewrite the whole source code in one go)
-- Compatible with Redux devtool (too good to give up)
+- Compatible with [redux-devtool](https://github.com/zalmoxisus/redux-devtools-extension) (too good to give up)
 - Encapsulated state (OOP is fine)
 - State is changed by message passing (also know as calling methods on instances)
 - Leverage new JS lang features
-
 
 For that I ended up breaking the problem into 3 pieces:
 
@@ -95,9 +105,9 @@ And below I describe how they work together.
 Decorator that implements the following interface:
 
 - `this.state`: read-only state cache
-- `this._state`: writable state (will be implemented as `this.#state` once TODO private fields reach stage-4)
-- `this.subscribe`: TODO Observable subscribe interface. Returns a subscription object
-- `this[$$observable]`: TODO Symbol.Observable interop
+- `this._state`: writable state (will be implemented as `this.#state` once [private fields proposal](https://github.com/tc39/proposal-class-fields#private-fields) reachs stage 4)
+- `this.subscribe`: [Observable](https://github.com/tc39/proposal-observable) instance subscribe method.
+- `this[$$observable]`: [`Symbol.Observable`](https://github.com/tc39/proposal-observable#api) for better Observable compatibility.
 
 Example of a counter class definition:
 
@@ -153,10 +163,10 @@ new values, the children function runs with the new values as arguments.
 
 ```js
 <Subscribe to={[counter]}>
-  {() => {
+  {(counterState) => {
     return (
       <div>
-        <span> Count: {counter.state.count} </span>
+        <span> Count: {counterState.count} </span>
         <button onClick={() => counter.increment()}>Increment +</button>
         <button onClick={() => counter.decrement()}>Decrement +</button>
       </div>
@@ -165,7 +175,7 @@ new values, the children function runs with the new values as arguments.
 </Subscribe>
 ```
 
-It's compatible with Redux since it also offers a minimal TODO Observable interface.
+It's compatible with Redux since it also [offers a minimal Observable interface](https://github.com/reduxjs/redux/blob/e944bb2a9762c2d423502a838edae48ae86f123d/src/createStore.js#L236).
 That enables mixing old and new code, making a step-by-step refactoring possible.
 
 ```js
@@ -188,11 +198,9 @@ That enables mixing old and new code, making a step-by-step refactoring possible
 
 ###### `devtool()`
 
-A function that TODO accepts an observable instance as first argument and an options
+A function that accepts an observable instance as first argument and an options
 object as second. Works with any object that implements the [Observable API](https://observable-api)
 (redux store, city-state subscribable, rxjs, ...)
-
-TODO photo with devtool running
 
 ```js
 const counter = new Counter()
