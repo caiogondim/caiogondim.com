@@ -1,0 +1,28 @@
+{
+  "name": "caiogondim.com",
+  "version": "1.0.0",
+  "description": "caiogondim.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiogondim/caiogondim.com.git"
+  },
+  "keywords": [],
+  "author": "Caio Gondim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caiogondim/caiogondim.com/issues"
+  },
+  "homepage": "https://github.com/caiogondim/caiogondim.com#readme",
+  "dependencies": {
+    "next": "8.0.3",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "superstylin": "1.0.3"
+  }
+}
