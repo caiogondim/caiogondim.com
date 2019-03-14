@@ -1,0 +1,2 @@
+- Rename supertylin class `u-readable` to `superstylin-readable`
+- 404

@@ -1,0 +1,8 @@
+{
+  "extends": ["standard", "plugin:react/recommended"],
+  "plugins": ["emotion"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
+}

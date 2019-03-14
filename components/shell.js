@@ -2,7 +2,7 @@ import Head from 'next/head'
 import superstylin from 'superstylin'
 import { Global, css } from '@emotion/core'
 
-function Shell({ children }) {
+function Shell ({ children }) {
   return (
     <div>
       <Head>
@@ -55,8 +55,8 @@ function Shell({ children }) {
             display: none;
           }
         `} />
-     </Head>
-     {children}
+      </Head>
+      {children}
     </div>
   )
 }

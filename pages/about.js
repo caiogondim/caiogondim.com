@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-function About() {
+function About () {
   return (
     <div>
       <Link href="/index">

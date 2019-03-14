@@ -29,7 +29,7 @@ const logoTextStyle = css`
   text-transform: uppercase;
 `
 
-function Header({ pageName = 'CAIO GONDIM' }) {
+function Header ({ pageName = 'CAIO GONDIM' }) {
   return (
     <section css={sectionStyle} className="u-readable">
       <header>
