@@ -1,59 +1,60 @@
 import Head from 'next/head'
 import superstylin from 'superstylin'
+import { Global, css } from '@emotion/core'
 
 function Shell({ children }) {
   return (
     <div>
       <Head>
-       <style jsx global>{superstylin}</style>
-       <style jsx global>{`
-         body {
-           margin: calc((100vw / 25) * 1.563);
-           max-width: 100%;
-         }
+        <Global styles={css`${superstylin.toString()}`} />
+        <Global styles={css`
+          body {
+            margin: calc((100vw / 25) * 1.563);
+            max-width: 100%;
+          }
 
-         ection {
-           margin: 0 0 3.815rem 0;
-         }
+          section {
+            margin: 0 0 3.815rem 0;
+          }
 
-         section:last-child {
-           margin: 0;
-         }
+          section:last-child {
+            margin: 0;
+          }
 
-         a {
-           -webkit-tap-highlight-color: rgba(243, 243, 243, 0.5);
-         }
+          a {
+            -webkit-tap-highlight-color: rgba(243, 243, 243, 0.5);
+          }
 
-         ::selection {
-           filter: invert(100%);
-           background-color: #343334;
-           color: white;
-         }
+          ::selection {
+            filter: invert(100%);
+            background-color: #343334;
+            color: white;
+          }
 
-         @keyframes fadeIn {
-           0% {
-             opacity: 0;
-           }
-           100% {
-             opacity: 1;
-           }
-         }
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
 
-         main {
-           opacity: 0;
-           animation: fadeIn 0.262s 0.1672s forwards;
-         }
+          main {
+            opacity: 0;
+            animation: fadeIn 0.262s 0.1672s forwards;
+          }
 
-         main .from-back-forward-cache {
-           opacity: 1;
-           animation: none;
-         }
+          main .from-back-forward-cache {
+            opacity: 1;
+            animation: none;
+          }
 
-         // Remove extra line on code blocks
-         code::after {
-           display: none;
-         }
-       `}</style>
+          // Remove extra line on code blocks
+          code::after {
+            display: none;
+          }
+        `} />
      </Head>
      {children}
     </div>
