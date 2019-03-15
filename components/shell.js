@@ -31,19 +31,7 @@ function Shell ({ children }) {
             color: white;
           }
 
-          @keyframes fadeIn {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
 
-          main {
-            opacity: 0;
-            animation: fadeIn 0.262s 0.1672s forwards;
-          }
 
           main .from-back-forward-cache {
             opacity: 1;

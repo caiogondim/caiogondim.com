@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import Link from 'next/link'
 
 const sectionStyle = css`
   display: flex;
@@ -33,10 +34,12 @@ function Header ({ pageName = 'CAIO GONDIM' }) {
   return (
     <section css={sectionStyle} className="u-readable">
       <header>
-        <a href="/">
-          <h1><img src="/static/logo.svg" css={logoStyle} /></h1>
-          <h6 css={logoTextStyle}>/ {pageName}</h6>
-        </a>
+        <Link prefetch href="/">
+          <a>
+            <h1><img src="/static/logo.svg" css={logoStyle} /></h1>
+            <h6 css={logoTextStyle}>/ {pageName}</h6>
+          </a>
+        </Link>
       </header>
     </section>
   )
