@@ -8,7 +8,8 @@ const posts = []
 
 postsPath.forEach(postPath => {
   const content = readFileSync(`./pages/posts/${postPath}`)
-  const meta = extractMetadata(content, { path: postPath.replace('.mdx', '') })
+  const meta = extractMetadata(content)
+  meta.path = postPath.replace('.mdx', '')
   posts.push(meta)
 })
 
