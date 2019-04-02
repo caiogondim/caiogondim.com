@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js'"
+    "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js'"
   },
   "repository": {
     "type": "git",

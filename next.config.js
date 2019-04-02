@@ -19,7 +19,7 @@ module.exports = pipe(
 
       return config
     },
-    pageExtensions: ['js', 'jsx', 'mdx'],
+    pageExtensions: ['js', 'jsx', 'mdx']
   },
   withMDX
 )
