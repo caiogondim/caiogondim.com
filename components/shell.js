@@ -31,8 +31,6 @@ function Shell ({ children }) {
             color: white;
           }
 
-
-
           main .from-back-forward-cache {
             opacity: 1;
             animation: none;

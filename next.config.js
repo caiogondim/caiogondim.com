@@ -1,5 +1,5 @@
 const pipe = require('tubo')
-const withMDX = require('@zeit/next-mdx')()
+const withMDX = require('@next/mdx')()
 
 module.exports = pipe(
   {
