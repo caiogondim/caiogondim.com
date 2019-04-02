@@ -18,7 +18,7 @@ const style = css`
   animation: fadeIn 0.262s 0.1672s forwards;
 `
 
-function Content({ children }) {
+function Content ({ children }) {
   return (
     <div className="u-readable" css={style}>
       {children}

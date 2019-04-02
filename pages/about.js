@@ -5,7 +5,7 @@ import Content from '../components/content'
 function About () {
   return (
     <Shell>
-      <Header />
+      <Header pageName="About" />
       <Content>
         <p>
           I'm a Brazilian software engineer, passionate about web technologies and currently living in New

@@ -34,7 +34,7 @@ function Index () {
           <Link prefetch href="/photos.html">
             <a css={tableOfContentsItemStyle}><h3>PHOTOS</h3></a>
           </Link>
-          <Link prefetch href="/posts.html">
+          <Link prefetch href="/posts">
             <a css={tableOfContentsItemStyle}><h3>POSTS</h3></a>
           </Link>
           <Link prefetch href="/projects.html">
