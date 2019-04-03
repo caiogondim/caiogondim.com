@@ -8,3 +8,8 @@ export const gray70 = '#595859'
 export const gray80 = '#464646'
 export const gray90 = '#343334'
 export const gray100 = '#272727'
+
+export const white1 = '#fcfcfc'
+export const white2 = '#f9f9f9'
+export const white3 = '#f6f6f6'
+export const white4 = '#f3f3f3'

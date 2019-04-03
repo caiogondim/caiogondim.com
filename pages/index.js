@@ -1,21 +1,22 @@
 import Link from 'next/link'
+import { css } from '@emotion/core'
 import Shell from '../components/shell'
 import Header from '../components/header'
 import Content from '../components/content'
-import { css } from '@emotion/core'
+import { gray30, gray90 } from '../util/colors'
 
 const tableOfContentsItemStyle = css`
   text-decoration: none;
   cursor: pointer;
 
   &:hover h3 {
-    color: #343334;
+    color: ${gray90};
   }
 
   h3 {
     margin-bottom: 0;
     margin-top: 0;
-    color: #c0bfc0;
+    color: ${gray30};
   }
 `
 

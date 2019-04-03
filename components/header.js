@@ -1,5 +1,6 @@
 import { css } from '@emotion/core'
 import Link from 'next/link'
+import { gray60, white4 } from '../util/colors'
 
 const sectionStyle = css`
   display: flex;
@@ -19,15 +20,16 @@ const logoStyle = css`
   width: 3.052rem;
   height: 3.052rem;
   border-radius: 50%;
-  background-color: #F3F3F3;
+  background-color: ${white4};
 `
 
 const logoTextStyle = css`
   display: block;
-  color: #777677;
+  color: ${gray60};
   font-weight: bold;
   margin-top: -1rem;
   text-transform: uppercase;
+  letter-spacing: -0.023rem;
 `
 
 function Header ({ pageName = 'CAIO GONDIM' }) {
