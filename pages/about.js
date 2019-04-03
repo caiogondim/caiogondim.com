@@ -9,7 +9,7 @@ function About () {
       <Content>
         <p>
           I'm a Brazilian software engineer, passionate about web technologies and currently living in New
-          York, working for <a href="https://mobile.nytimes.com" target="_blank">The New York Times</a>.
+          York, working for <a href="https://nytimes.com" target="_blank">The New York Times</a>.
         </p>
         <p>
           My current areas of interest are:

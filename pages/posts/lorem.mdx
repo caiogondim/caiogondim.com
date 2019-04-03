@@ -1,21 +1,11 @@
-import Shell from '../../components/shell'
-import Header from '../../components/header'
-import Content from '../../components/content'
+import Post from '../../components/post'
 
-export default function Post({ children }) {
-  return (
-    <Shell>
-      <Header pageName="Post" />
-      <Content>
-        {children}
-      </Content>
-    </Shell>
-  )
-}
+export default ({ children }) => <Post>{children}</Post>
 
 export const meta = {
+  date: '2018-01-01',
+  summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.',
   title: 'Lorem',
-  date: '2018-01-01'
 }
 
 # Title
