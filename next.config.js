@@ -1,5 +1,4 @@
 const pipe = require('tubo')
-const withImages = require('next-images')
 const withMDX = require('@next/mdx')()
 
 function disableCacheDirectory (config) {
@@ -29,6 +28,5 @@ module.exports = pipe(
     },
     pageExtensions: ['js', 'jsx', 'mdx']
   },
-  withMDX,
-  withImages
+  withMDX
 )

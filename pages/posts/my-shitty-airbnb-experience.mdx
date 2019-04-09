@@ -1,10 +1,6 @@
-import Post from '../../../components/post'
-import Asterism from '../../../components/asterism'
-import imgJavaScriptErrorsOnCheckout from './javascript-errors-on-checkout.png'
-import imgPrivateRoomPeroNoMucho from './private-room-pero-no-mucho.gif'
-import imgCustomerService1 from './customer-service-1.png'
-import imgCustomerService2 from './customer-service-2.jpg'
-import imgFinallySmiling from './finally-smiling.jpg'
+import Post from '../../components/post'
+import Asterism from '../../components/asterism'
+import AspectRatio from '../../components/aspect-ratio'
 
 export const meta = {
   date: '2017-04-27',
@@ -70,10 +66,14 @@ I opened up the developer tools (if you don't know what it is, this side note
 won't make sense for you, skip to next paragraph) and there I see a bunch of
 JavaScript errors.
 
-<img
-  src={imgJavaScriptErrorsOnCheckout}
-  alt="JavaScript errors on AirBnB checkout process"
-/>
+<p>
+  <AspectRatio ratio="1911:1092">
+    <img
+      src="/static/posts/my-shitty-airbnb-experience/javascript-errors-on-checkout.png"
+      alt="JavaScript errors on AirBnB checkout process"
+    />
+  </AspectRatio>
+</p>
 
 Monitoring, anyone?
 
@@ -141,10 +141,14 @@ A dark pattern is a know trick inside the industry used in websites and apps to
 make you pay for things you didn't mean to. Just like the below example, which I
 recorded with the exact apartment I got.
 
-<img
-  src={imgPrivateRoomPeroNoMucho}
-  alt="Private room pero no mucho"
-/>
+<p>
+  <AspectRatio ratio="1335:860">
+    <img
+      src="/static/posts/my-shitty-airbnb-experience/private-room-pero-no-mucho.gif"
+      alt="Private room pero no mucho"
+    />
+  </AspectRatio>
+</p>
 
 I searched for apartments in Greenpoint, applied the filter for private
 apartments, the apartment shows up on the results with filters applied, and I
@@ -175,19 +179,27 @@ to go to Twitter and basically bitch about it. And don't expect instant answers
 there, they clearly don't know what the I in
 [IM](https://en.wikipedia.org/wiki/Instant_messaging) stand for.
 
-<img
-  src={imgCustomerService1}
-  alt="Customer service"
-/>
+<p>
+  <AspectRatio ratio="750:1334">
+    <img
+      src="/static/posts/my-shitty-airbnb-experience/customer-service-1.png"
+      alt="Customer service"
+    />
+  </AspectRatio>
+</p>
 
 After getting their attention, I received an email with a number I should call.
 They said I should do it immediately and there was already someone allocated to
 solve my case.
 
-<img
-  src={imgCustomerService2}
-  alt="Customer service"
-/>
+<p>
+  <AspectRatio ratio="720:1280">
+    <img
+      src="/static/posts/my-shitty-airbnb-experience/customer-service-2.jpg"
+      alt="Customer service"
+    />
+  </AspectRatio>
+</p>
 
 Yes. More than half an hour listening some crazy music while on hold waiting for
 “the guy that was already allocated to solve my case” to pick it up. After the
@@ -240,10 +252,14 @@ everybody as well). So a lot of what if's started popping in my head:
 
 AirBnB is totally unreliable.
 
-<img
-  src={imgFinallySmiling}
-  alt="Finally smiling"
-/>
+<p>
+  <AspectRatio ratio="1080:809">
+    <img
+      src="/static/posts/my-shitty-airbnb-experience/finally-smiling.jpg"
+      alt="Finally smiling"
+    />
+  </AspectRatio>
+</p>
 
 We ended up booking an
 [awesome hotel](http://www.standardhotels.com/new-york/properties/east-village)
