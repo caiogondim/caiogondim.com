@@ -1,0 +1,230 @@
+import Post from '../../components/post'
+import Asterism from '../../components/asterism'
+import AspectRatio from '../../components/aspect-ratio'
+
+export const meta = {
+  date: '2018-10-23',
+  summary: `
+    Everybody is creating a state management library. I had to create mine as well.
+  `,
+  title: 'State management with city-state',
+  link: '/posts/state-management-with-city-state'
+}
+
+export default ({ children }) => <Post meta={meta}>{children}</Post>
+
+Since I joined The New York Times I have been working on modernizing our
+multimedia player. Changing Grunt to npm scripts, from imperative templates to
+Preact, using Babel for new JS lang features, simplifying the architecture,
+making it harder, faster, better, stronger, ...
+
+I was proud of almost all the decisions I took during those almost 2
+years. But one never felt right: **using Redux for state management**.
+
+> This is a purely anedoctal experience. I'm not saying that using Redux is
+> wrong per se. It just didn't fit my mental model and use case.
+
+Using Redux was better than using no state management solution, but I always had
+this feeling deep inside that it was the wrong approach. Too verbose and with
+its own idioms that didn't play well with native syntax as async/await and
+error handling. But I drank the Kool-Aid.
+
+After 1.5 years after first implementing it on the multimedia player, I can
+better look in retrospect and see what went well, what didn't, and why I ended
+up creating my own state management library.
+
+## Better with than without
+
+Using Redux for our use case was indeed better than not using a state management
+library or pattern. It was clear on where to look for state mutators and all
+possible state transitions.
+
+## Tooling is amazing
+
+That was probably what got my attention at first with Redux. The
+[redux-devtool](https://github.com/zalmoxisus/redux-devtools-extension) extension
+was a real game changer for our team since the player is a super stateful
+application.
+
+## Verbosity
+
+Yeah, everybody complains and knows about that. But I have to say it one more
+time. Redux is verbose and full of ceremony. Doing the simplest of the things
+(sync state change) is done in 3 steps:
+
+- Defining an action
+- Defining a reducer to handle that action
+- Dispatching an action
+
+I know there are tons of libraries to remove friction from the above problem,
+but that actually created a new one.
+
+## Fragmentation
+
+There is no right way of doing anything on Redux. Need to do an async state
+change? Maybe you should use `redux-saga`...or maybe `redux-thunk`. How to
+organize code? Redux docs say you should do X, but `re-ducks`
+is super popular and says otherwise.
+
+Redux provides you with the basic. But for any production-ready app, you will
+need more libraries to fill the holes Redux left and it slowly becomes into a
+choose your own adventure kind of game.
+
+## Killing the vibe
+
+Using Redux was just a pain. Having to create a reducer, action, action type
+dict, action dispatcher, ..., for trivial things was preventing me from getting
+things done and it was ... boring.
+
+<Asterism />
+
+<p>
+  <AspectRatio ratio="980:400" backgroundColor="transparent">
+    <img
+      src="/static/posts/state-management-with-city-state/city-state-logo.svg"
+      alt="JavaScript errors on AirBnB checkout process"
+    />
+  </AspectRatio>
+</p>
+
+## [city-state](https://github.com/caiogondim/city-state.js): my take on state management
+
+Necessity being the mother of invention and me being the great wheel reinventer
+both made me decide to take a shot on that state management thing. My
+constraints were:
+
+- Has to be backwards compatible with Redux (I can't afford to rewrite the whole source code in one go)
+- Compatible with [redux-devtool](https://github.com/zalmoxisus/redux-devtools-extension) (too good to give up)
+- Encapsulated state (OOP is fine)
+- State is changed by message passing (also know as calling methods on instances)
+- Leverage new JS lang features
+
+For that I ended up breaking the problem into 3 pieces:
+
+- `subscribable`
+- `Subscribe`
+- `devtool`
+
+And below I describe how they work together.
+
+## `@subscribable`
+
+Decorator that implements the following interface:
+
+- `this.state`: read-only state cache
+- `this._state`: writable state (will be implemented as `this.#state` once [private fields proposal](https://github.com/tc39/proposal-class-fields#private-fields) reaches stage 4)
+- `this.subscribe`: [Observable](https://github.com/tc39/proposal-observable) instance subscribe method.
+- `this[$$observable]`: [`Symbol.Observable`](https://github.com/tc39/proposal-observable#api) for better Observable compatibility.
+
+Example of a counter class definition:
+
+```js
+@subscribable
+class Counter {
+  constructor() {
+    this._state = { count: 0 }
+  }
+
+  increment() {
+    this._state.count += 1
+  }
+
+  decrement() {
+    this._state.count -= 1
+  }
+}
+
+export default Counter
+```
+
+Can also be used as a function:
+
+```js
+export default subscribable(Counter)
+```
+
+For changing the state, just call a method. Whenever `this._state` changes, all
+subscribers will run with the new computed state as argument.
+
+```js
+const counter = new Counter()
+const subscription = counter.subscribe(state => console.log(state)) // => { count: 0 }
+counter.increment() // => { count: 1 }
+
+subscription.unsubscribe()
+counter.increment() // => Doesn't log anymore
+```
+
+It provides a minimal Observable API that can be used for casting to a true
+Observable instance:
+
+```js
+const counterObservable = rxjs.from(counter)
+```
+
+###### `<Subscribe>`
+
+`Subscribe` is a React component that accepts a prop `to` with an array of
+Observables and a function as children. Whenever the subscribed observables push
+new values, the children function runs with the new values as arguments.
+
+```js
+<Subscribe to={[counter]}>
+  {(counterState) => {
+    return (
+      <div>
+        <span> Count: {counterState.count} </span>
+        <button onClick={() => counter.increment()}>Increment +</button>
+        <button onClick={() => counter.decrement()}>Decrement +</button>
+      </div>
+    )
+  }}
+</Subscribe>
+```
+
+It's compatible with Redux since it also [offers a minimal Observable interface](https://github.com/reduxjs/redux/blob/e944bb2a9762c2d423502a838edae48ae86f123d/src/createStore.js#L236).
+That enables mixing old and new code, making a step-by-step refactoring possible.
+
+```js
+<Subscribe to={[reduxStore]}>
+  {currentState => {
+    return (
+      <div>
+        <span> Count: {currentState.count} </span>
+        <button onClick={() => reduxStore.dispatch(actions.increment())}>
+          Increment +
+        </button>
+        <button onClick={() => reduxStore.dispatch(actions.decrement())}>
+          Decrement +
+        </button>
+      </div>
+    )
+  }}
+</Subscribe>
+```
+
+###### `devtool()`
+
+A function that accepts an observable instance as first argument and an options
+object as second. Works with any object that implements the [Observable API](https://observable-api)
+(redux store, city-state subscribable, rxjs, ...)
+
+```js
+const counter = new Counter()
+devtool(counter, { name: 'counter' })
+```
+
+###### Conclusion
+
+I'm in no way saying that it's wrong using Redux. It just didn't feel right to
+me and my use case. In the end [`city-state`](https://github.com/caiogondim/city-state.js) is a state management library I
+created to solve a need I had that was having a tool that better reflects my
+programming mental model. And I'm sharing it just in case anyone else feels the
+same.
+
+For a full working demo, check the [examples folder](https://github.com/caiogondim/city-state.js/tree/master/examples) on Github.
+To better understand all the features it provides, check the [test folder](https://github.com/caiogondim/city-state.js/tree/master/test).
+
+`city-state` is released as an open source library under the MIT license.
+Feedback, feature requests and pull requests are welcome and should be addressed
+on the [Github repo](https://github.com/caiogondim/city-state.js).

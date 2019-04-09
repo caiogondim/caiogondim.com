@@ -39,7 +39,7 @@ function Header ({ pageName = 'CAIO GONDIM' }) {
         <Link prefetch href="/">
           <a>
             <h1><img src="/static/logo.svg" css={logoStyle} /></h1>
-            <h6 css={logoTextStyle}>/ {pageName}</h6>
+            <h6 css={logoTextStyle}>{pageName}</h6>
           </a>
         </Link>
       </header>

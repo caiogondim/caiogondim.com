@@ -1,2 +1,4 @@
 - Rename supertylin class `u-readable` to `superstylin-readable`
 - 404
+- read post inside folder (eg: posts/dolor/index.mdx)
+- remove next-images

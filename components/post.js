@@ -2,6 +2,7 @@ import { css } from '@emotion/core'
 import Shell from './shell'
 import Header from './header'
 import Content from './content'
+import PostHeader from './post-header'
 
 const postStyle = css`
   /* Looks like h3 */
@@ -17,17 +18,33 @@ const postStyle = css`
     letter-spacing: 0;
     line-height: 1.5;
   }
+
+  img {
+    max-width: 100%;
+    border-radius: 10px
+  }
+
+  video {
+    border-radius: 10px;
+  }
 `
 
-export default function Post ({ children }) {
+const postHeaderStyle = css`
+  margin-bottom: 3.815rem;
+`
+
+function Post ({ children, meta }) {
   return (
     <Shell>
-      <Header pageName="Post" />
+      <Header pageName="/ Post" />
       <Content>
         <div css={postStyle}>
+          <PostHeader meta={meta} innerCss={postHeaderStyle} />
           {children}
         </div>
       </Content>
     </Shell>
   )
 }
+
+export default Post
