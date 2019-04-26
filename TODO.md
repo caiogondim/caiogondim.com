@@ -1,4 +1,11 @@
 - Rename supertylin class `u-readable` to `superstylin-readable`
 - 404
-- read post inside folder (eg: posts/dolor/index.mdx)
-- remove next-images
+- create next-import-static (based on next-images)
+- publications page
+- update-list-of-posts script
+- remove asterism component (use hr)
+- rename prettier to format
+- update superstylin
+- photo detail max-height not taller than viewport
+  - always show entire photo
+  - test landscape mode

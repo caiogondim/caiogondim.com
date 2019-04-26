@@ -5,9 +5,11 @@ import { white3 } from '../util/colors'
 const style = css`
   position: relative;
   width: 100%;
+  display: block;
 
   & > * {
     position: absolute;
+    display: block;
     width: 100%;
     height: 100%;
     top: 0;
@@ -20,9 +22,9 @@ function AspectRatio ({ ratio, children, backgroundColor }) {
   const paddingBottom = `${(height / width) * 100}%`
 
   return (
-    <div css={style} style={{ paddingBottom, backgroundColor }}>
+    <span css={style} style={{ paddingBottom, backgroundColor }}>
       {children}
-    </div>
+    </span>
   )
 }
 

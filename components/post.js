@@ -2,7 +2,8 @@ import { css } from '@emotion/core'
 import Shell from './shell'
 import Header from './header'
 import Content from './content'
-import PostHeader from './post-header'
+import ListItemHeader from './list-item-header'
+import PageIntro from './page-intro'
 
 const postStyle = css`
   /* Looks like h3 */
@@ -36,10 +37,13 @@ const postHeaderStyle = css`
 function Post ({ children, meta }) {
   return (
     <Shell>
-      <Header pageName="/ Post" />
+      <Header pageName="/ Posts" />
       <Content>
+        <PageIntro>
+          Random things at random times.
+        </PageIntro>
         <div css={postStyle}>
-          <PostHeader meta={meta} innerCss={postHeaderStyle} />
+          <ListItemHeader title={meta.title} titleLink={meta.link} innerCss={postHeaderStyle} />
           {children}
         </div>
       </Content>

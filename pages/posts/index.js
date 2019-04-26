@@ -5,8 +5,6 @@ import Content from '../../components/content'
 import PostHeader from '../../components/post-header'
 import listOfPosts from '../../util/list-of-posts'
 
-console.log('listOfPosts qqqqq', listOfPosts)
-
 const postsStyle = css`
   list-style: none;
 

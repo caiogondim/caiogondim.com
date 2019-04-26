@@ -35,13 +35,13 @@ currently on the [Web Incubator CG](https://github.com/WICG/shape-detection-api)
 It’s hardware accelerated, uses specialized OS calls when available and doesn't
 run on the main thread.
 
-###### Enabling the API
+## Enabling the API
 
 Since this is still an experimental API, make sure to have the latest Chrome
 browser and enable it using the URL
 `chrome://flags/#enable-experimental-web-platform-features`.
 
-###### Live examples
+## Live examples
 
 Below an example of face detection on a `<video>` tag.
 
@@ -62,7 +62,7 @@ below links:
 - [camera](https://caiogondim.github.io/laughing-man.js/example/camera.html)
 - [video](https://caiogondim.github.io/laughing-man.js/example/video.html)
 
-###### API
+## API
 
 The API is fairly simple. First step is to create a `FaceDetector` instance. It
 exposes only one method called `detect` that accepts a `CanvasImageSource`,
@@ -83,7 +83,7 @@ try {
 }
 ```
 
-###### Detecting faces on a video frame
+## Detecting faces on a video frame
 
 For video we need a couple more steps. Because `FaceDetector` doesn't work with
 `<video>` tags, we need to use `<canvas>` to draw a frame.
@@ -155,7 +155,7 @@ $overlay.style.width = `${face.width * 2}px`
 $overlay.style.height = `${face.height * 2}px`
 ```
 
-###### Detecting faces on every video frame
+## Detecting faces on every video frame
 
 With the above code, we are able to detect faces in a video frame. In order to
 get face detection on every frame, we have to run the same code above in a loop,
@@ -186,7 +186,6 @@ async function loop ($canvas, $video) {
 }
 ```
 
-
 Using `requestAnimationFrame` on the first line we, well, request that the
 `loop` function run again on the next frame. And so on. Endlessly.
 
@@ -197,7 +196,7 @@ that we use the flag `isDetectingFaces` to prevent a new call.
 And now we can reuse the same code above to move the overlay on top of the
 detected face.
 
-###### Source code
+## Source code
 
 For a complete working solution, check the
 [GitHub repo](https://github.com/caiogondim/laughing-man.js/blob/master/src/index.js).

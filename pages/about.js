@@ -1,11 +1,22 @@
 import Shell from '../components/shell'
 import Header from '../components/header'
 import Content from '../components/content'
+import HeaderDivider from '../components/header-divider'
+import { css } from '@emotion/core'
+import { gray90 } from '../util/colors'
+
+const contactHeaderStyle = css`
+
+
+
+  margin-bottom: 2rem;
+  width: 100%;
+`;
 
 function About () {
   return (
     <Shell>
-      <Header pageName="About" />
+      <Header pageName="/ About" />
       <Content>
         <p>
           I'm a Brazilian software engineer, passionate about web technologies and currently living in New
@@ -20,7 +31,7 @@ function About () {
             <li>Peer-to-peer</li>
           </ul>
         </p>
-        <h6 className="u-separator">Contact</h6>
+        <HeaderDivider title="Contact" />
         <p>
           <a href="mailto://me@caiogondim.com">me@caiogondim.com</a><br />
           <a href="https://twitter.com/@caio_gondim" target="_blank">Twitter</a><br />

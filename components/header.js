@@ -25,9 +25,9 @@ const logoStyle = css`
 
 const logoTextStyle = css`
   display: block;
-  color: ${gray60};
   font-weight: bold;
   margin-top: -1rem;
+  margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: -0.023rem;
 `

@@ -1,51 +1,28 @@
-// @preval
-
-const { readdirSync, readFileSync, statSync } = require('fs')
-const extractMetadata = require('./extract-mdx-metadata')
-const pipe = require('tubo')
-
-function getAllPosts (posts = [], depth = 0, basePath = './pages/posts/') {
-  readdirSync(basePath).forEach(entry => {
-    const fullPath = `${basePath}${entry}`
-    const entryStat = statSync(fullPath)
-
-    if (/\.mdx$/.test(fullPath)) {
-      posts.push(fullPath)
-    } else if (entryStat.isDirectory()) {
-      getAllPosts(posts, depth + 1, `${basePath}${entry}/`)
-    }
-  })
-
-  return posts
-}
-
-function sortPostsByDate (posts) {
-  posts.sort((post1, post2) => {
-    const date1 = new Date(post1.date)
-    const date2 = new Date(post2.date)
-    return date2.getTime() - date1.getTime()
-  })
-
-  return posts
-}
-
-function getPostsMeta (postsPath) {
-  const postsMeta = []
-  postsPath.forEach(postPath => {
-    const meta = pipe(
-      readFileSync(postPath),
-      extractMetadata
-    )
-    postsMeta.push(meta)
-  })
-  return postsMeta
-}
-
-const postsMeta = pipe(
-  getAllPosts(),
-  getPostsMeta,
-  sortPostsByDate
-)
-console.log(postsMeta)
-
-module.exports = postsMeta
+module.exports = [{
+  date: `2018-10-23`,
+  summary: `
+    Everybody is creating a state management library. I had to create mine as well.
+  `,
+  title: `State management with city-state`,
+  link: `/posts/state-management-with-city-state`
+}, {
+  date: `2017-08-10`,
+  summary: `
+    The <code>FaceDetector</code> is part of the
+    <a href="https://wicg.github.io/shape-detection-api/#face-detection-api">Shape Detection API</a>,
+    currently on the <a href="https://github.com/WICG/shape-detection-api">Web Incubator CG</a>.
+    It’s hardware accelerated, uses specialized OS calls when available and don’t use the main thread.
+  `,
+  title: `JS native face detection`,
+  link: `/posts/js-native-face-detection`
+}, {
+  date: `2017-04-27`,
+  summary: `My 💩 experience while using AirBnB in New York.`,
+  title: `My shitty AirBnB experience`,
+  link: `/posts/my-shitty-airbnb-experience`
+}, {
+  title: `Sorte, nordeste, trabalho`,
+  date: `2016-11-24`,
+  summary: `Um diálogo médio sobre a vida enquanto pegava um táxi em São Paulo.`,
+  link: `/posts/sorte-nordeste-trabalho`
+}];

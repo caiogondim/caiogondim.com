@@ -19,7 +19,7 @@ const talkContainerStyle = css`
 function Talks () {
   return (
     <Shell>
-      <Header pageName="Talks" />
+      <Header pageName="/ Talks" />
       <Content>
         <div>
           <p>

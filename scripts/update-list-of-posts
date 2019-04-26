@@ -1,0 +1,112 @@
+#!/usr/bin/env node
+
+const { readdirSync, readFileSync, statSync, writeFileSync } = require('fs')
+const pipe = require('tubo')
+const { parse } = require('@babel/parser')
+const generate = require('@babel/generator').default
+const traverse = require('@babel/traverse').default
+const mdx = require('@mdx-js/mdx')
+const visit = require('unist-util-visit')
+
+function extractMdxMetadata (content, options) {
+  const defaultOptions = {
+    defaultReturnValue: {}
+  }
+  const mergedOptions = {
+    ...defaultOptions,
+    ...options
+  }
+
+  let meta = mergedOptions.defaultReturnValue
+
+  mdx.sync(content, {
+    mdPlugins: [
+      () => (tree) => {
+        visit(tree, 'export', (node) => {
+          const ast = parse(node.value, {
+            plugins: ['jsx'],
+            sourceType: 'module'
+          })
+
+          traverse(ast, {
+            VariableDeclarator: (path) => {
+              if (path.node.id.name === 'meta') {
+                // eslint-disable-next-line no-eval, security/detect-eval-with-expression
+                meta = eval(`module.exports = ${generate(path.node.init).code}`)
+              }
+            }
+          })
+        })
+      }
+    ]
+  })
+
+  return meta
+}
+
+function getAllPosts (posts = [], depth = 0, basePath = './pages/posts/') {
+  readdirSync(basePath).forEach(entry => {
+    const fullPath = `${basePath}${entry}`
+    const entryStat = statSync(fullPath)
+
+    if (/\.mdx$/.test(fullPath)) {
+      posts.push(fullPath)
+    } else if (entryStat.isDirectory()) {
+      getAllPosts(posts, depth + 1, `${basePath}${entry}/`)
+    }
+  })
+
+  return posts
+}
+
+function sortPostsByDate (posts) {
+  posts.sort((post1, post2) => {
+    const date1 = new Date(post1.date)
+    const date2 = new Date(post2.date)
+    return date2.getTime() - date1.getTime()
+  })
+
+  return posts
+}
+
+function getPostsMeta (postsPath) {
+  const postsMeta = []
+  postsPath.forEach(postPath => {
+    const meta = pipe(
+      readFileSync(postPath),
+      extractMdxMetadata
+    )
+    postsMeta.push(meta)
+  })
+  return postsMeta
+}
+
+function writeToFile(posts) {
+  // Generates code for './util/list-of-post.js'
+  let code = 'module.exports = ['
+  for (let post of posts) {
+    code += '{'
+    for (let [key, val] of Object.entries(post)) {
+      code += `${key}: \`${val}\`,`
+    }
+    code += '},'
+  }
+  code += ']'
+
+  //
+  const ast = parse(code)
+  traverse(ast, {
+    File: (path) => {
+      path.replaceWithSourceString(code)
+    }
+  })
+  const newCode = generate(ast).code
+  writeFileSync('./util/list-of-posts.js', newCode)
+}
+
+pipe(
+  getAllPosts(),
+  getPostsMeta,
+  sortPostsByDate,
+  writeToFile,
+)

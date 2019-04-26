@@ -32,22 +32,22 @@ function Index () {
           <a href="https://github.com/caiogondim" rel="noopener noreferrer" target="_blank" css={tableOfContentsItemStyle}>
             <h3>CODE</h3>
           </a>
-          <Link prefetch href="/photos.html">
+          <Link prefetch href="/photos">
             <a css={tableOfContentsItemStyle}><h3>PHOTOS</h3></a>
           </Link>
           <Link prefetch href="/posts">
             <a css={tableOfContentsItemStyle}><h3>POSTS</h3></a>
           </Link>
-          <Link prefetch href="/projects.html">
+          <Link prefetch href="/projects">
             <a css={tableOfContentsItemStyle}><h3>PROJECTS</h3></a>
           </Link>
-          <Link prefetch href="/publications.html">
+          <Link prefetch href="/publications">
             <a css={tableOfContentsItemStyle}><h3>PUBLICATIONS</h3></a>
           </Link>
           <a href="https://www.linkedin.com/in/cgondim/" rel="noopener noreferrer" target="_blank" css={tableOfContentsItemStyle}>
             <h3>RÉSUMÉ</h3>
           </a>
-          <Link href="/talks.html">
+          <Link href="/talks">
             <a css={tableOfContentsItemStyle}><h3>TALKS</h3></a>
           </Link>
         </div>
