@@ -1,7 +1,5 @@
 - Rename supertylin class `u-readable` to `superstylin-readable`
-- 404
 - create next-import-static (based on next-images)
-- publications page
 - update-list-of-posts script
 - remove asterism component (use hr)
 - rename prettier to format

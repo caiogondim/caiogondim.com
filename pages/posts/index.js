@@ -2,8 +2,10 @@ import { css } from '@emotion/core'
 import Shell from '../../components/shell'
 import Header from '../../components/header'
 import Content from '../../components/content'
-import PostHeader from '../../components/post-header'
+import ListItemHeader from '../../components/list-item-header'
+import PageIntro from '../../components/page-intro'
 import listOfPosts from '../../util/list-of-posts'
+import formatDate from '../../util/format-date-to-post'
 
 const postsStyle = css`
   list-style: none;
@@ -18,11 +20,15 @@ export default function Posts () {
     <Shell>
       <Header pageName="/ Posts" />
       <Content>
+        <PageIntro>
+          Random things at random times.
+        </PageIntro>
         <ul css={postsStyle}>
           {listOfPosts.map(postMeta => {
+            const postDate = formatDate(postMeta.date)
             return (
               <li key={postMeta.link}>
-                <PostHeader meta={postMeta} />
+                <ListItemHeader title={postMeta.title} titleLink={postMeta.link} subtitle={postDate} />
                 <p dangerouslySetInnerHTML={{ __html: postMeta.summary }}></p>
               </li>
             )

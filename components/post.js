@@ -3,7 +3,7 @@ import Shell from './shell'
 import Header from './header'
 import Content from './content'
 import ListItemHeader from './list-item-header'
-import PageIntro from './page-intro'
+import formatDate from '../util/format-date-to-post'
 
 const postStyle = css`
   /* Looks like h3 */
@@ -35,15 +35,13 @@ const postHeaderStyle = css`
 `
 
 function Post ({ children, meta }) {
+  const date = formatDate(meta.date)
   return (
     <Shell>
       <Header pageName="/ Posts" />
       <Content>
-        <PageIntro>
-          Random things at random times.
-        </PageIntro>
         <div css={postStyle}>
-          <ListItemHeader title={meta.title} titleLink={meta.link} innerCss={postHeaderStyle} />
+          <ListItemHeader title={meta.title} titleLink={meta.link} subtitle={date} innerCss={postHeaderStyle} />
           {children}
         </div>
       </Content>
