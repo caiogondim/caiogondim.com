@@ -6,6 +6,8 @@ function Shell ({ children }) {
   return (
     <div>
       <Head>
+        <title>CAIO GONDIM</title>
+        <link rel="icon" type="image/png" href="/static/logo.png" />
         <Global styles={css`${superstylin.toString()}`} />
         <Global styles={css`
           body {

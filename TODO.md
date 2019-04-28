@@ -9,3 +9,4 @@
 - photo detail max-height not taller than viewport
   - always show entire photo
   - test landscape mode
+- dark mode
