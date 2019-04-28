@@ -24,7 +24,6 @@ export default function Posts () {
               <li key={postMeta.link}>
                 <PostHeader meta={postMeta} />
                 <p dangerouslySetInnerHTML={{ __html: postMeta.summary }}></p>
-                <p><a href={postMeta.link}>Read more</a></p>
               </li>
             )
           })}
