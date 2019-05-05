@@ -4,7 +4,7 @@ import Shell from './shell'
 import Header from './header'
 import HeaderDivider from './header-divider'
 import AspectRatio from './aspect-ratio'
-import { gray30 } from '../util/colors'
+import { gray30, white4 } from '../util/colors'
 
 const descriptionStyle = css`
   text-align: right;
@@ -20,7 +20,7 @@ function PhotoDetail ({ title, subtitle, imgSrc, imgRatio, camera, shutter, lens
         subtitle={subtitle}
       />
       <p>
-        <AspectRatio ratio={imgRatio}>
+        <AspectRatio ratio={imgRatio} backgroundColor={white4}>
           <img src={imgSrc} />
         </AspectRatio>
       </p>

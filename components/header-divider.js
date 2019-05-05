@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { gray90, gray30, gray100 } from '../util/colors'
+import { gray90, gray10, gray100 } from '../util/colors'
 
 const titleStyle = (sticky) => css`
   ${sticky
@@ -30,7 +30,7 @@ const subtitleStyle = css`
   right: 0;
   position: absolute;
   display: inline-block;
-  color: ${gray30};
+  color: ${gray10};
 `
 
 function HeaderDivider ({ title, subtitle, sticky }) {
