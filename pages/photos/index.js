@@ -2,9 +2,7 @@ import Link from 'next/link'
 import AspectRatio from '../../components/aspect-ratio'
 import Shell from '../../components/shell'
 import Header from '../../components/header'
-import Content from '../../components/content'
 import HeaderDivider from '../../components/header-divider'
-import PageIntro from '../../components/page-intro'
 import { white4 } from '../../util/colors'
 import { css } from '@emotion/core'
 
@@ -35,11 +33,6 @@ function Photos () {
   return (
     <Shell>
       <Header pageName="/ Photos" />
-      <Content>
-        <PageIntro>
-          More photos on my <a href="https://instagram.com/caiogondim" target="_blank" rel="noopener noreferrer">Instagram account</a>.
-        </PageIntro>
-      </Content>
 
       <div css={containerStyle}>
         <section>
@@ -47,6 +40,7 @@ function Photos () {
             title="Hawaii"
             subtitle="2017"
             sticky
+            style={{ marginTop: 0 }}
           />
           <Link href="/photos/2017-hawaii/billabong-pipeline-masters-1">
             <a>

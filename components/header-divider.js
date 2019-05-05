@@ -33,9 +33,9 @@ const subtitleStyle = css`
   color: ${gray10};
 `
 
-function HeaderDivider ({ title, subtitle, sticky }) {
+function HeaderDivider ({ title, subtitle, sticky, style }) {
   return (
-    <h6 css={titleStyle(sticky)}>
+    <h6 css={titleStyle(sticky)} style={style}>
       {title}
       {subtitle && <span css={subtitleStyle}>{subtitle}</span>}
     </h6>
@@ -45,11 +45,13 @@ function HeaderDivider ({ title, subtitle, sticky }) {
 HeaderDivider.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  sticky: PropTypes.bool
+  sticky: PropTypes.bool,
+  style: PropTypes.shape({})
 }
 
 HeaderDivider.defaultProps = {
-  sticky: false
+  sticky: false,
+  style: {}
 }
 
 export default HeaderDivider
