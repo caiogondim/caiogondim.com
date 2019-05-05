@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "now-build": "next build && next export -o dist",
     "start": "next start",
     "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' --ignore-path util/list-of-posts.js",
     "update-list-of-posts": "./scripts/update-list-of-posts"
@@ -23,7 +24,7 @@
   "homepage": "https://github.com/caiogondim/caiogondim.com#readme",
   "dependencies": {
     "@emotion/core": "10.0.10",
-    "next": "8.1.0",
+    "next": "8.1.1-canary.24",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "superstylin": "1.2.0"
@@ -45,6 +46,7 @@
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-standard": "4.0.0",
+    "raw-loader": "2.0.0",
     "tubo": "1.1.3",
     "unist-util-visit": "1.4.0"
   }

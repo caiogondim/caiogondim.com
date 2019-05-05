@@ -3,18 +3,10 @@ const withMDX = require('@next/mdx')()
 
 module.exports = pipe(
   {
-    webpack: (config, { defaultLoaders }) => {
+    webpack: (config) => {
       config.module.rules.push({
         test: /\.css$/,
-        use: [
-          defaultLoaders.babel,
-          {
-            loader: require('styled-jsx/webpack').loader,
-            options: {
-              type: 'global'
-            }
-          }
-        ]
+        use: ['raw-loader']
       })
 
       return config
