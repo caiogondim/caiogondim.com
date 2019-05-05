@@ -14,13 +14,13 @@ function About () {
         </p>
         <p>
           My current areas of interest are:
-          <ul>
-            <li>Frontend performance</li>
-            <li>Media playback</li>
-            <li>Media streaming</li>
-            <li>Peer-to-peer</li>
-          </ul>
         </p>
+        <ul>
+          <li>Frontend performance</li>
+          <li>Media playback</li>
+          <li>Media streaming</li>
+          <li>Peer-to-peer</li>
+        </ul>
         <HeaderDivider title="Contact" />
         <p>
           <a href="mailto://me@caiogondim.com">me@caiogondim.com</a><br />
