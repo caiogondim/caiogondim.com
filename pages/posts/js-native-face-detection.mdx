@@ -1,4 +1,4 @@
-import Post from '../../components/post'
+import PostDetail from '../../components/post-detail'
 import AspectRatio from '../../components/aspect-ratio'
 
 export const meta = {
@@ -13,7 +13,7 @@ export const meta = {
   link: '/posts/js-native-face-detection'
 }
 
-export default ({ children }) => <Post meta={meta}>{children}</Post>
+export default ({ children }) => <PostDetail meta={meta}>{children}</PostDetail>
 
 When I first read [Paul Kinlan's blog post](https://paul.kinlan.me/face-detection/)
 about native face detection, the movie Ghost in the Shell was about to be

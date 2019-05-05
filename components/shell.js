@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import superstylin from 'superstylin'
 import { Global, css } from '@emotion/core'
@@ -50,6 +51,10 @@ function Shell ({ children }) {
       {children}
     </div>
   )
+}
+
+Shell.propTypes = {
+  children: PropTypes.node
 }
 
 export default Shell

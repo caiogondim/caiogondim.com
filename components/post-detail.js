@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import Shell from './shell'
 import Header from './header'
@@ -34,7 +35,7 @@ const postHeaderStyle = css`
   margin-bottom: 3.815rem;
 `
 
-function Post ({ children, meta }) {
+function PostDetail ({ children, meta }) {
   const date = formatDate(meta.date)
   return (
     <Shell>
@@ -49,4 +50,13 @@ function Post ({ children, meta }) {
   )
 }
 
-export default Post
+PostDetail.propTypes = {
+  children: PropTypes.node,
+  meta: PropTypes.shape({
+    title: PropTypes.string,
+    link: PropTypes.string,
+    date: PropTypes.string
+  })
+}
+
+export default PostDetail

@@ -1,4 +1,5 @@
-import { css, cx } from '@emotion/core'
+import PropTypes from 'prop-types'
+import { css } from '@emotion/core'
 import { gray90, gray30 } from '../util/colors'
 
 const titleStyle = (sticky) => css`
@@ -18,16 +19,16 @@ const titleStyle = (sticky) => css`
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
   width: 100%;
-`;
+`
 
 const subtitleStyle = css`
   right: 0;
   position: absolute;
   display: inline-block;
   color: ${gray30};
-`;
+`
 
-function StickyHeader ({ title, subtitle, sticky, innerCss }) {
+function HeaderDivider ({ title, subtitle, sticky }) {
   return (
     <h6 css={titleStyle(sticky)}>
       {title}
@@ -36,4 +37,14 @@ function StickyHeader ({ title, subtitle, sticky, innerCss }) {
   )
 }
 
-export default StickyHeader
+HeaderDivider.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  sticky: PropTypes.bool
+}
+
+HeaderDivider.defaultProps = {
+  sticky: false
+}
+
+export default HeaderDivider

@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import formatDateToPost from '../util/format-date-to-post'
 import { gray60 } from '../util/colors'
 
 const titleStyle = css`
@@ -31,6 +31,18 @@ function ListItemHeader ({ title, subtitle, titleLink, innerCss }) {
       </h3>
     </div>
   )
+}
+
+ListItemHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  titleLink: PropTypes.string,
+  innerCss: PropTypes.string
+}
+
+ListItemHeader.defaultProps = {
+  titleLink: null,
+  innerCss: null
 }
 
 export default ListItemHeader

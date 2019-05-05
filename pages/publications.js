@@ -4,7 +4,6 @@ import Content from '../components/content'
 import ListItemHeader from '../components/list-item-header'
 import PageIntro from '../components/page-intro'
 import { css } from '@emotion/core'
-import { gray30 } from '../util/colors'
 
 const listStyle = css`
   list-style: none;
@@ -36,6 +35,7 @@ function Publications () {
               <p><a
                 href="https://community.risingstack.com/the-worlds-fastest-javascript-memoization-library/"
                 target="_blank"
+                rel="noopener noreferrer"
               >Link</a></p>
             </li>
             <li>
@@ -49,6 +49,7 @@ function Publications () {
               <p><a
                 href="https://www.casadocodigo.com.br/products/livro-coletanea-front-end"
                 target="_blank"
+                rel="noopener noreferrer"
               >Link</a></p>
             </li>
           </ul>

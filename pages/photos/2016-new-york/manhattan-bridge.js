@@ -1,6 +1,6 @@
 import PhotoDetail from '../../../components/photo-detail'
 
-export default () => (
+const PhotoDetailWrapper = () => (
   <PhotoDetail
     title="Manhattan Bridge"
     subtitle="New York"
@@ -12,3 +12,5 @@ export default () => (
     iso="ISO 400"
   />
 )
+
+export default PhotoDetailWrapper

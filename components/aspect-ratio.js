@@ -30,6 +30,7 @@ function AspectRatio ({ ratio, children, backgroundColor }) {
 
 AspectRatio.propTypes = {
   ratio: PropTypes.string.isRequired,
+  children: PropTypes.node,
   backgroundColor: PropTypes.string
 }
 

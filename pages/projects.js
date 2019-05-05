@@ -4,7 +4,6 @@ import Content from '../components/content'
 import ListItemHeader from '../components/list-item-header'
 import PageIntro from '../components/page-intro'
 import { css } from '@emotion/core'
-import { gray30 } from '../util/colors'
 
 const listStyle = css`
   list-style: none;

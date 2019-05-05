@@ -4,7 +4,6 @@
 - remove asterism component (use hr)
 - rename prettier to format
 - update superstylin
-- photo detail max-height not taller than viewport
-  - always show entire photo
-  - test landscape mode
 - dark mode
+- lint code
+  - props

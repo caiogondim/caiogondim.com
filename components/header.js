@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import Link from 'next/link'
-import { gray60, white4 } from '../util/colors'
+import { white4 } from '../util/colors'
 
 const sectionStyle = css`
   display: flex;
@@ -32,7 +33,7 @@ const logoTextStyle = css`
   letter-spacing: -0.023rem;
 `
 
-function Header ({ pageName = 'CAIO GONDIM' }) {
+function Header ({ pageName }) {
   return (
     <section css={sectionStyle} className="u-readable">
       <header>
@@ -45,6 +46,14 @@ function Header ({ pageName = 'CAIO GONDIM' }) {
       </header>
     </section>
   )
+}
+
+Header.propTypes = {
+  pageName: PropTypes.string
+}
+
+Header.defaultProps = {
+  pageName: 'CAIO GONDIM'
 }
 
 export default Header

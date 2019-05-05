@@ -24,7 +24,7 @@ function Talks () {
         <div>
           <p>
             I love to give talks and meet awesome people at conferences. If you want to invite me to an event,
-            send me an <a href="mailto:me@caiogondim.com">email</a> and let's get in touch.
+            send me an <a href="mailto:me@caiogondim.com">email</a> and let&#039;s get in touch.
           </p>
 
           <h1 css={yearSeparatorStyle}>2016</h1>

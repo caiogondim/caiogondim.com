@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' --ignore-pattern='*/extract-mdx-metadata.js'"
+    "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' --ignore-path util/list-of-posts.js",
+    "update-list-of-posts": "./scripts/update-list-of-posts"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "@babel/traverse": "7.4.3",
     "@emotion/babel-preset-css-prop": "10.0.9",
     "@mdx-js/loader": "1.0.15",
+    "@mdx-js/mdx": "1.0.16",
     "@next/mdx": "8.1.0",
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",

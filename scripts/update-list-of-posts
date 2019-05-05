@@ -20,7 +20,7 @@ function extractMdxMetadata (content, options) {
   let meta = mergedOptions.defaultReturnValue
 
   mdx.sync(content, {
-    mdPlugins: [
+    remarkPlugins: [
       () => (tree) => {
         visit(tree, 'export', (node) => {
           const ast = parse(node.value, {
@@ -81,23 +81,30 @@ function getPostsMeta (postsPath) {
   return postsMeta
 }
 
-function writeToFile(posts) {
-  // Generates code for './util/list-of-post.js'
-  let code = 'module.exports = ['
-  for (let post of posts) {
-    code += '{'
-    for (let [key, val] of Object.entries(post)) {
-      code += `${key}: \`${val}\`,`
-    }
-    code += '},'
-  }
-  code += ']'
+// This is being done because eslint is failing to read a file with backtick
+// strings.
+function normalizePostMetaVal(val) {
+  return val.split('\n').map(line => line.trim()).join(' ').replace(/'/g, '\'').trim()
+}
 
-  //
-  const ast = parse(code)
+function writeToFile(posts) {
+  let listOfPostsSourceString = 'listOfPosts = ['
+  for (let post of posts) {
+    listOfPostsSourceString += '{'
+    for (let [key, val] of Object.entries(post)) {
+      listOfPostsSourceString += `${key}: '${normalizePostMetaVal(val)}',`
+    }
+    listOfPostsSourceString += '},'
+  }
+  listOfPostsSourceString += ']'
+
+  const code = readFileSync('./util/list-of-posts.js', { encoding: 'utf8' })
+  const ast = parse(code, { sourceType: 'module' })
   traverse(ast, {
-    File: (path) => {
-      path.replaceWithSourceString(code)
+    VariableDeclarator: (path) => {
+      if (path.node.id.name === 'listOfPosts') {
+        path.replaceWithSourceString(listOfPostsSourceString)
+      }
     }
   })
   const newCode = generate(ast).code

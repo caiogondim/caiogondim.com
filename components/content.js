@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 
 const style = css`
@@ -12,6 +13,10 @@ function Content ({ children }) {
       {children}
     </div>
   )
+}
+
+Content.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default Content
