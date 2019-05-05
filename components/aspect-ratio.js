@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { white3 } from '../util/colors'
 
 const style = css`
   position: relative;
@@ -35,7 +34,7 @@ AspectRatio.propTypes = {
 }
 
 AspectRatio.defaultProps = {
-  backgroundColor: white3
+  backgroundColor: 'transparent'
 }
 
 export default AspectRatio

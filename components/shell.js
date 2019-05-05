@@ -30,12 +30,6 @@ function Shell ({ children }) {
               -webkit-tap-highlight-color: rgba(243, 243, 243, 0.5);
             }
 
-            ::selection {
-              filter: invert(100%);
-              background-color: #343334;
-              color: white;
-            }
-
             main .from-back-forward-cache {
               opacity: 1;
               animation: none;

@@ -37,7 +37,7 @@ ListItemHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   titleLink: PropTypes.string,
-  innerCss: PropTypes.string
+  innerCss: PropTypes.shape({})
 }
 
 ListItemHeader.defaultProps = {

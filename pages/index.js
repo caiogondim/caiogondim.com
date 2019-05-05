@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import Shell from '../components/shell'
 import Header from '../components/header'
 import Content from '../components/content'
-import { gray30, gray90 } from '../util/colors'
+import { gray30, gray90, gray70 } from '../util/colors'
 
 const tableOfContentsItemStyle = css`
   text-decoration: none;
@@ -11,12 +11,20 @@ const tableOfContentsItemStyle = css`
 
   &:hover h3 {
     color: ${gray90};
+
+    @media (prefers-color-scheme: dark) {
+      color: #fff;
+    }
   }
 
   h3 {
     margin-bottom: 0;
     margin-top: 0;
     color: ${gray30};
+
+    @media (prefers-color-scheme: dark) {
+      color: ${gray70};
+    }
   }
 `
 

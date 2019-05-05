@@ -39,7 +39,12 @@ function Header ({ pageName }) {
       <header>
         <Link prefetch href="/">
           <a>
-            <h1><img src="/static/logo.svg" css={logoStyle} /></h1>
+            <h1>
+              <picture>
+                <source srcSet="/static/logo-light.svg" media="(prefers-color-scheme: dark)" />
+                <img src="/static/logo-dark.svg" css={logoStyle} />
+              </picture>
+            </h1>
             <h6 css={logoTextStyle}>{pageName}</h6>
           </a>
         </Link>

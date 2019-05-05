@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { gray90, gray30 } from '../util/colors'
+import { gray90, gray30, gray100 } from '../util/colors'
 
 const titleStyle = (sticky) => css`
   ${sticky
@@ -19,6 +19,11 @@ const titleStyle = (sticky) => css`
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
   width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${gray100};
+    border-color: #fff;
+  }
 `
 
 const subtitleStyle = css`

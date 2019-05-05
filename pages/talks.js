@@ -197,20 +197,20 @@ function Talks () {
 
           <section css={talkContainerStyle}>
             <h3>3.PHP</h3>
-            <p>
+            <div>
               <time>October, 2011</time>
               <address>São Luís, Brazil 📍</address>
               <a href="https://speakerdeck.com/caiogondim/html5-seu-navegador-nao-e-mais-o-mesmo" target="_blank" rel="noopener noreferrer">Slides</a>
-            </p>
+            </div>
           </section>
 
           <section css={talkContainerStyle}>
             <h3>PHP Conf</h3>
-            <p>
+            <div>
               <time>December, 2011</time>
               <address>São Paulo, Brazil 📍</address>
               <a href="https://speakerdeck.com/caiogondim/html5-seu-navegador-nao-e-mais-o-mesmo" target="_blank" rel="noopener noreferrer">Slides</a>
-            </p>
+            </div>
           </section>
         </div>
       </Content>
