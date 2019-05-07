@@ -24,6 +24,31 @@ const logoStyle = css`
   background-color: ${white4};
 `
 
+const logoDarkStyle = css`
+  ${logoStyle};
+
+  @media (prefers-color-scheme: light) {
+    display: inline-block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    display: none;
+  }
+`
+
+const logoLightStyle = css`
+  ${logoStyle};
+  display: none;
+
+  @media (prefers-color-scheme: dark) {
+    display: inline-block;
+  }
+
+  @media (prefers-color-scheme: light) {
+    display: none;
+  }
+`
+
 const logoTextStyle = css`
   display: block;
   font-weight: bold;
@@ -40,10 +65,8 @@ function Header ({ pageName }) {
         <Link prefetch href="/">
           <a>
             <h1>
-              <picture>
-                <source srcSet="/static/logo-light.svg" media="(prefers-color-scheme: dark)" />
-                <img src="/static/logo-dark.svg" css={logoStyle} />
-              </picture>
+              <img src="/static/logo-dark.png" css={logoDarkStyle} />
+              <img src="/static/logo-light.png" css={logoLightStyle} />
             </h1>
             <h6 css={logoTextStyle}>{pageName}</h6>
           </a>

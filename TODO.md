@@ -7,3 +7,4 @@
 - dark mode
 - lint code
   - props
+- fade in images
