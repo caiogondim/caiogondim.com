@@ -8,12 +8,16 @@ import { gray30, gray90, gray70 } from '../util/colors'
 const tableOfContentsItemStyle = css`
   text-decoration: none;
   cursor: pointer;
+  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 
-  &:hover h3 {
-    color: ${gray90};
+  @media (hover:hover) {
+    &:hover h3 {
+      color: ${gray90};
 
-    @media (prefers-color-scheme: dark) {
-      color: #fff;
+      @media (prefers-color-scheme: dark) {
+        color: #fff;
+      }
     }
   }
 

@@ -10,6 +10,8 @@ const sectionStyle = css`
 
   a {
     text-decoration: none;
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1 {

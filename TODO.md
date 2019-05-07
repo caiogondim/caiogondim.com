@@ -11,3 +11,4 @@
 - remove back forward cache
   - on pop state on componentDidMount
   - onpageshow event
+- photo names collapsing mauna kea observatories

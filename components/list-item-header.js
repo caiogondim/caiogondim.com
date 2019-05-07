@@ -5,12 +5,17 @@ import { gray60 } from '../util/colors'
 const titleStyle = css`
   margin-top: 0;
 
+
   a {
     text-decoration: none;
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  a:hover {
-    text-decoration: underline;
+  @media (hover:hover) {
+    a:hover {
+      text-decoration: underline;
+    }
   }
 `
 
