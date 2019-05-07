@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "now-build": "next build && next export -o dist",
+    "now-build": "next build",
     "start": "next start",
     "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' --ignore-path util/list-of-posts.js",
     "update-list-of-posts": "./scripts/update-list-of-posts",
