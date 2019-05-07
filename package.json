@@ -8,7 +8,7 @@
     "build": "next build",
     "now-build": "next build && next export -o dist",
     "start": "next start",
-    "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' --ignore-path util/list-of-posts.js",
+    "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' 'now.json' --ignore-path util/list-of-posts.js",
     "update-list-of-posts": "./scripts/update-list-of-posts",
     "deploy": "now"
   },
@@ -43,6 +43,7 @@
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-emotion": "10.0.7",
     "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-json": "1.4.0",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-react": "7.12.4",

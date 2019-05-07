@@ -8,3 +8,6 @@
 - lint code
   - props
 - fade in images
+- remove back forward cache
+  - on pop state on componentDidMount
+  - onpageshow event

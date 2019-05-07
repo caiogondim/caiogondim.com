@@ -1,6 +1,6 @@
 {
   "extends": ["standard", "plugin:react/recommended"],
-  "plugins": ["emotion"],
+  "plugins": ["emotion", "json"],
   "parser": "babel-eslint",
   "rules": {
     "react/react-in-jsx-scope": "off"
