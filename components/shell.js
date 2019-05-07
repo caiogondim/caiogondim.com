@@ -2,13 +2,17 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import superstylin from 'superstylin'
 import { Global, css } from '@emotion/core'
+import isDarkMode from '../util/is-dark-mode'
 
 function Shell ({ children }) {
   return (
     <div>
       <Head>
         <title>CAIO GONDIM</title>
-        <link rel="icon" type="image/png" href="/static/logo.png" />
+        {isDarkMode()
+          ? <link rel="icon" type="image/png" href="/static/logo-light.png" />
+          : <link rel="icon" type="image/png" href="/static/logo-dark.png" />
+        }
         <Global
           styles={css`
             ${superstylin.toString()}
