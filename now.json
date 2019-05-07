@@ -4,7 +4,7 @@
     { "src": "package.json", "use": "@now/static-build" }
   ],
   "routes": [
-    { "src": "/static/.+", "headers": { "cache-control": "s-maxage=31536000, max-age=86400" } }
+    { "src": "/static/.+", "headers": { "cache-control": "s-maxage=31536000, max-age=86400, stale-while-revalidate=86400" } }
   ],
   "alias": ["caiogondim.com"]
 }
