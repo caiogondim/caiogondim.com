@@ -11,8 +11,7 @@ module.exports = pipe(
 
       return config
     },
-    pageExtensions: ['js', 'jsx', 'mdx'],
-    target: 'serverless'
+    pageExtensions: ['js', 'jsx', 'mdx']
   },
   withMDX
 )
