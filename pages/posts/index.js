@@ -4,7 +4,6 @@ import Header from '../../components/header'
 import Content from '../../components/content'
 import ListItemHeader from '../../components/list-item-header'
 import listOfPosts from '../../util/list-of-posts'
-import formatDate from '../../util/format-date-to-post'
 
 const postsStyle = css`
   list-style: none;
@@ -21,10 +20,9 @@ export default function Posts () {
       <Content>
         <ul css={postsStyle}>
           {listOfPosts.map(postMeta => {
-            const postDate = formatDate(postMeta.date)
             return (
               <li key={postMeta.link}>
-                <ListItemHeader title={postMeta.title} titleLink={postMeta.link} subtitle={postDate} />
+                <ListItemHeader title={postMeta.title} titleLink={postMeta.link} subtitle={postMeta.dateString} />
                 <p dangerouslySetInnerHTML={{ __html: postMeta.summary }}></p>
               </li>
             )

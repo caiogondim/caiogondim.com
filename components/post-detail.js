@@ -4,7 +4,6 @@ import Shell from './shell'
 import Header from './header'
 import Content from './content'
 import ListItemHeader from './list-item-header'
-import formatDate from '../util/format-date-to-post'
 
 const postStyle = css`
   /* Looks like h3 */
@@ -36,13 +35,17 @@ const postHeaderStyle = css`
 `
 
 function PostDetail ({ children, meta }) {
-  const date = formatDate(meta.date)
   return (
     <Shell>
       <Header pageName="/ Posts" />
       <Content>
         <div css={postStyle}>
-          <ListItemHeader title={meta.title} titleLink={meta.link} subtitle={date} innerCss={postHeaderStyle} />
+          <ListItemHeader
+            title={meta.title}
+            titleLink={meta.link}
+            subtitle={meta.dateString}
+            innerCss={postHeaderStyle}
+          />
           {children}
         </div>
       </Content>
