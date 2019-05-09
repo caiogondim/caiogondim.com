@@ -2,9 +2,12 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { gray60 } from '../util/colors'
 
+const containerStyle = css`
+  font-variant-numeric: normal;
+`
+
 const titleStyle = css`
   margin-top: 0;
-
 
   a {
     text-decoration: none;
@@ -24,9 +27,9 @@ const subtitleStyle = css`
   color: ${gray60};
 `
 
-function ListItemHeader ({ title, subtitle, titleLink, innerCss }) {
+function ListItemHeader ({ title, subtitle, titleLink }) {
   return (
-    <div css={innerCss}>
+    <div css={containerStyle}>
       <p css={subtitleStyle}>{subtitle}</p>
       <h3 css={titleStyle}>
         {titleLink
@@ -41,13 +44,11 @@ function ListItemHeader ({ title, subtitle, titleLink, innerCss }) {
 ListItemHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  titleLink: PropTypes.string,
-  innerCss: PropTypes.shape({})
+  titleLink: PropTypes.string
 }
 
 ListItemHeader.defaultProps = {
-  titleLink: null,
-  innerCss: null
+  titleLink: null
 }
 
 export default ListItemHeader
