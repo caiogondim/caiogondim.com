@@ -1,14 +1,9 @@
 import Shell from '../components/shell'
 import Header from '../components/header'
 import Content from '../components/content'
+import YearSeparator from '../components/year-separator'
+import PageIntro from '../components/page-intro'
 import { css } from '@emotion/core'
-import { gray30 } from '../util/colors'
-
-const yearSeparatorStyle = css`
-    color: ${gray30};
-    margin-bottom: 3.815rem;
-    margin-top: 3.815rem;
-`
 
 const talkContainerStyle = css`
   address {
@@ -22,12 +17,12 @@ function Talks () {
       <Header pageName="/ Talks" />
       <Content>
         <div>
-          <p>
+          <PageIntro>
             I love to give talks and meet awesome people at conferences. If you want to invite me to an event,
             send me an <a href="mailto:me@caiogondim.com">email</a> and let&#039;s get in touch.
-          </p>
+          </PageIntro>
 
-          <h1 css={yearSeparatorStyle}>2016</h1>
+          <YearSeparator>2016</YearSeparator>
 
           <section css={talkContainerStyle}>
             <h3>Hack São Luís</h3>
@@ -38,7 +33,7 @@ function Talks () {
             </div>
           </section>
 
-          <h1 css={yearSeparatorStyle}>2015</h1>
+          <YearSeparator>2015</YearSeparator>
 
           <section css={talkContainerStyle}>
             <h3>Node.js meetup</h3>
@@ -76,7 +71,7 @@ function Talks () {
             </div>
           </section>
 
-          <h1 css={yearSeparatorStyle}>2014</h1>
+          <YearSeparator>2014</YearSeparator>
 
           <section css={talkContainerStyle}>
             <h3>Front in Fortaleza</h3>
@@ -98,7 +93,7 @@ function Talks () {
             </div>
           </section>
 
-          <h1 css={yearSeparatorStyle}>2013</h1>
+          <YearSeparator>2013</YearSeparator>
 
           <section css={talkContainerStyle}>
             <h3>RS.js</h3>
@@ -182,7 +177,7 @@ function Talks () {
             </div>
           </section>
 
-          <h1 css={yearSeparatorStyle}>2012</h1>
+          <YearSeparator>2012</YearSeparator>
 
           <section css={talkContainerStyle}>
             <h3>Front in Maceió</h3>
@@ -193,7 +188,7 @@ function Talks () {
             </div>
           </section>
 
-          <h1 css={yearSeparatorStyle}>2011</h1>
+          <YearSeparator>2011</YearSeparator>
 
           <section css={talkContainerStyle}>
             <h3>3.PHP</h3>
