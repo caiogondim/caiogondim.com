@@ -1,5 +1,11 @@
 // This file is updated by running /scripts/update-list-of-posts
 const listOfPosts = [{
+  date: '2019-08-10',
+  dateString: 'August 10, 2019',
+  summary: 'Computers were black screens with green letters. Machines that performed a single task at a time from command input in the terminal. Commands that are difficult to memorize and almost impossible to deduce. A radical change in the way you interact with a computer was needed. But the necessary technology did not yet exist for such a paradigm break.',
+  title: 'The desktop metaphor',
+  link: '/posts/the-desktop-metaphor'
+}, {
   date: '2018-10-23',
   dateString: 'September 23, 2018',
   summary: 'Everybody is creating a state management library. I had to create mine as well.',
