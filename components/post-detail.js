@@ -18,6 +18,7 @@ const postStyle = css`
     font-size: 1rem;
     letter-spacing: 0;
     line-height: 1.5;
+    margin-top: 3.815rem;
   }
 
   img {

@@ -1,0 +1,225 @@
+import PostDetail from '../../components/post-detail'
+import Asterism from '../../components/asterism'
+import AspectRatio from '../../components/aspect-ratio'
+
+export const meta = {
+  date: '2019-08-10',
+  dateString: 'August 10, 2019',
+  summary: `
+    Computers were black screens with green letters. Machines that performed a
+    single task at a time from command input in the terminal. Commands that are
+    difficult to memorize and almost impossible to deduce. A radical change in
+    the way you interact with a computer was needed. But the necessary technology
+    did not yet exist for such a paradigm break.
+  `,
+  title: 'The desktop metaphor',
+  link: '/posts/the-desktop-metaphor'
+}
+
+export default ({ children }) => <PostDetail meta={meta}>{children}</PostDetail>
+
+Using a computer wasn't an easy task back in the day - maybe not even today.
+Computers were black screens with green letters. Machines that performed a
+single task at a time from command input in the terminal. Commands that were
+difficult to memorize and almost impossible to deduce.
+
+By 1960, computers were beginning to gain some popularity outside of businesses,
+especially among hobbyist groups. People who spent a lot of time reading thick
+manuals only to be able to interact with a computer. All this complexity scared
+most people and was obviously a major impediment to the popularization of these
+fantastic machines.
+
+A radical change in the way you interact with a computer was needed. Something
+more visual, closer to the reality of a human being and more distant from the
+low level reality of a machine. But the technology needed simply did not exist
+for such a paradigm break.
+
+## The mother of all demos
+
+In science we are always leaning on the shoulders of giants. With the invention
+of the graphical interface it was no different. There was not really an
+inventor, but rather a series of improvements that were made over the previous
+generation.
+
+One of the first theorists on the subject was Vannevar Bush, chief engineer of
+the Office of Scientific Research and Development during World War II who, in
+1945, published an article entitled [“As We May Think”](https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/)
+describing his vision of the future of how we would use machines - called by him
+**Memex** - to access a vast set of linked data.
+
+This article inspired [Douglas Engelbart](http://en.wikipedia.org/wiki/Douglas_Engelbart).
+During his stay at Stanford College in Silicon Valley, he formed the
+Augmentation Research Center and conceived some of the basic inventions for the <abbr title="Graphical User Interface">GUI</abbr>
+to be what it is today. Among these inventions was the mouse, a device that
+allowed moving a pointer across the screen and manipulating information in a
+more flexible and natural way.
+
+> The digital revolution is far more significant than the invention of writing or even of printing.
+>
+> — Douglas Engelbart
+
+In December 1968 in San Francisco, Douglas Engelbart had demonstrated all the
+new inventions made by his team. Among these inventions was the aforementioned
+mouse as well as the concept of windows, hypertext, graphics, video
+conferencing, word processing, version control and a collaborative text editor.
+This presentation was - and is - a milestone in the history of computing, and
+became known as **The Mother of All Demos**, the most fantastic and ahead of its
+time technical demonstration. It can be - and should be - viewed below.
+
+<p>
+  <AspectRatio ratio="1280:960">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/yJDv-zdhzMY"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style={{ borderRadius: '10px' }}
+    ></iframe>
+  </AspectRatio>
+</p>
+
+## PARC
+
+The next wave of innovation in the field of Graphical User Interfaces would take
+place in Palo Alto, at Xerox's legendary Palo Alto Research Center (PARC) lab,
+where in 1970 much of Engelbart's team went to work. There they refined their
+ideas and even managed to implement and market these new ideas in 1981 with the
+[Xerox Star computer](https://en.wikipedia.org/wiki/Xerox_Star).
+
+<p>
+  <AspectRatio ratio="700:602">
+    <img
+      src="/static/posts/the-desktop-metaphor/xerox-alto.jpg"
+      alt="Xerox Alto computer"
+    />
+  </AspectRatio>
+</p>
+
+Xerox High The Xerox Star was the first commercial computer to come with a
+window-based graphical user interface (windows), icons, folders, a mouse,
+ethernet network, file server, print server, and email.
+
+It was also the first computer to employ the bit mapping technique. In essence,
+everything on the screen of the Xerox Star was an image. The bit mapping
+technique simplified the work of graphics and also allowed the computer to
+display an exact representation of what would be printed on the screen. What
+became known as WYSIWYG (What You See Is What You Get).
+
+Many credit the invention of graphical interfaces as we know today from PARC.
+There, they not only created (refined) the GUI, they also invented
+object-oriented programming - with the Smalltalk language - the MVC design
+pattern, laser printer, ethernet, WYSIWYG text editors, and so on.
+
+PARC scientists have defined the basis of the Graphical User Interface as WIMP,
+for Windows, Icons, Menu and Pointer Device. To date, most desktop systems,
+including Windows, OS X, Gnome, KDE, use this base.
+
+> The best way to predict the future is to invent it.
+>
+> – Alan Kay
+
+On top of these basic elements, the Office Metaphor was created. PARC
+scientists, especially Alan Kay, decided to use metaphors for common office
+tasks to narrow the learning curve of using a computer.
+
+## The metaphor
+
+The first Graphical User Interface, or GUI, was a metaphor for an
+office environment. The desktop represented an office desk. On top
+of it were papers, which were computer files.
+
+<p>
+  <AspectRatio ratio="483:324">
+    <img
+      src="/static/posts/the-desktop-metaphor/xerox-desktop-screenshot.jpg"
+      alt="The desktop metaphor"
+    />
+  </AspectRatio>
+</p>
+
+These same files could be grouped in folders, just as papers are organized in
+folders in offices. The files could be thrown in a trash just as it is done in
+an office. These files could even be rescued from the bin, just as we can do
+with crumpled paper thrown in the trash.
+
+In addition to the office metaphor, the concept of windows was developed. Each
+window would represent an open application. Each open application would be the
+equivalent of a paper on a table. In it the work would happen.
+
+Apple was largely responsible for the popularization of the GUI. Steve Jobs on a
+visit to the Xerox PARC got to know the GUI, and soon realized that this was the
+future. Xerox was having trouble selling the Xerox Alto, the only computer that
+had ever run a GUI. Jobs then made a proposal to Xerox to buy the GUI, and
+implement in what would become the [Apple Lisa](https://pt.wikipedia.org/wiki/Apple_Lisa).
+
+In the video below we have an Apple television advertisement announcing its new
+computer and its GUI with the office metaphor as a differentiator among other
+products of the time due to its ease of use. Notice how the actor uses his
+finger as a pointer, simulating a mouse, pointing to objects that the Mac
+simulates in its interface, such as papers, folders, and a calculator.
+
+<p>
+  <AspectRatio ratio="1280:1045">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/1UtlOgkOGy4"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style={{ borderRadius: '10px' }}
+    ></iframe>
+  </AspectRatio>
+</p>
+
+Virtually all operating systems that have adopted a graphical interface have
+used or use the office metaphor. Some more purist about their own metaphor,
+others more practical.
+
+BeOS, for example, showed an icon of external devices connected to the desktop,
+while internal devices were accessed through the computer icon, to be more
+faithful to metaphor.
+
+One of the most true implementations of metaphor itself came in 2010 with
+BumpTop. The idea of ​​the BumpTop interface was to more effectively simulate an
+office desk. In it, documents are small 3D objects that can be stacked,
+manipulated using gestures and even tossed around using physical laws for a more
+realistic experience.
+
+<p>
+  <AspectRatio ratio="1280:960">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/M0ODskdEPnQ"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style={{ borderRadius: '10px' }}
+    ></iframe>
+  </AspectRatio>
+</p>
+
+Unfortunately, the BumpTop product was discontinued shortly after the company
+was bought by Google.
+
+## Impacts
+
+The Desktop Metaphor developed by Alan Kay's team is still used today in
+all major desktop operating systems. It was an important step for computers to
+gain their popularity today. It made possible the use of computers by
+non-technical people and opened up different possibilities in the creation of
+computer programs, since we were no longer limited to a command line interface.
+
+It is so popular today that, for many, it has outgrown it's "inspiration." When
+we talk about folders or files, it comes to mind no longer folders and various
+papers, but files and folders on a computer. The desktop name itself is more
+closely related to your computer than it is to the top of your desk.
+
+## Reference
+
+- [Graphical User Interface GUI](http://www.britannica.com/EBchecked/topic/242033/graphical-user-interface-GUI)
+- [The desktop metaphor is like so five minutes ago](http://www.ethanhein.com/wp/2009/the-desktop-metaphor-is-like-so-five-minutes-ago/)
+- [BumpTop](http://en.wikipedia.org/wiki/BumpTop)
