@@ -4,9 +4,16 @@ import superstylin from 'superstylin'
 import { Global, css } from '@emotion/core'
 import isDarkMode from '../util/is-dark-mode'
 
-function Shell ({ children }) {
+const shellStyle = ({ width }) => {
+  return css`
+    width: ${width};
+    max-width: ${width};
+  `
+}
+
+function Shell ({ children, width }) {
   return (
-    <div>
+    <div css={shellStyle({ width })}>
       <Head>
         <title>CAIO GONDIM</title>
         {isDarkMode()
@@ -34,11 +41,6 @@ function Shell ({ children }) {
               -webkit-tap-highlight-color: rgba(243, 243, 243, 0.5);
             }
 
-            main .from-back-forward-cache {
-              opacity: 1;
-              animation: none;
-            }
-
             // Remove extra line on code blocks
             code::after {
               display: none;
@@ -52,7 +54,12 @@ function Shell ({ children }) {
 }
 
 Shell.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  width: PropTypes.string
+}
+
+Shell.defaultProps = {
+  width: '66ch'
 }
 
 export default Shell

@@ -29,5 +29,5 @@ const listOfPosts = [{
   summary: 'Um diálogo médio sobre a vida enquanto pegava um táxi em São Paulo.',
   title: 'Sorte, nordeste, trabalho',
   link: '/posts/sorte-nordeste-trabalho'
-}];
-export default listOfPosts;
+}]
+export default listOfPosts

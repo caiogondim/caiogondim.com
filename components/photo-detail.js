@@ -13,7 +13,7 @@ const descriptionStyle = css`
 
 function PhotoDetail ({ title, subtitle, imgSrc, imgRatio, camera, shutter, lens, iso }) {
   return (
-    <Shell>
+    <Shell width="100%">
       <Header pageName="/ Photos" />
       <HeaderDivider
         title={title}

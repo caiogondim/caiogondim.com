@@ -31,7 +31,7 @@ const imgStyle = css`
 
 function Photos () {
   return (
-    <Shell>
+    <Shell width="100%">
       <Header pageName="/ Photos" />
 
       <div css={containerStyle}>
