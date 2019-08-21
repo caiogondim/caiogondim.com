@@ -7,7 +7,7 @@ import isDarkMode from '../util/is-dark-mode'
 const shellStyle = ({ width }) => {
   return css`
     width: ${width};
-    max-width: ${width};
+    max-width: 100%;
   `
 }
 
