@@ -43,7 +43,6 @@ function PostDetail ({ children, meta }) {
         <div css={postStyle}>
           <ListItemHeader
             title={meta.title}
-            titleLink={meta.link}
             subtitle={meta.dateString}
             innerCss={postHeaderStyle}
           />
