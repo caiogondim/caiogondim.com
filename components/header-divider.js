@@ -29,11 +29,11 @@ const wrapperStyle = (sticky) => css`
 
 const titleStyle = css`
   flex: 1 1 auto;
-`;
+`
 
 const spacer = css`
   min-width: 1ch;
-`;
+`
 
 const subtitleStyle = css`
   flex: 1 1 auto;
