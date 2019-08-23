@@ -9,7 +9,7 @@ function About () {
       <Header pageName="/ About" />
       <Content>
         <p>
-          I&#039;m a Brazilian software engineer, passionate about web technologies and currently living in New
+          I&#039;m a software engineer, passionate about web technologies and currently living in New
           York, working for <a href="https://nytimes.com" target="_blank" rel="noopener noreferrer">The New York Times</a>.
         </p>
         <p>
