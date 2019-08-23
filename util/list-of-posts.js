@@ -2,7 +2,7 @@
 const listOfPosts = [{
   date: '2019-08-10',
   dateString: 'August 10, 2019',
-  summary: 'Computers were black screens with green letters. Machines that performed a single task at a time from command input in the terminal. Commands that are difficult to memorize and almost impossible to deduce. A radical change in the way you interact with a computer was needed. But the necessary technology did not yet exist for such a paradigm break.',
+  summary: 'A radical change in the way we interact with a computer was needed. But the necessary technology did not yet exist for such a paradigm break.',
   title: 'The desktop metaphor',
   link: '/posts/the-desktop-metaphor'
 }, {
@@ -29,5 +29,5 @@ const listOfPosts = [{
   summary: 'Um diálogo médio sobre a vida enquanto pegava um táxi em São Paulo.',
   title: 'Sorte, nordeste, trabalho',
   link: '/posts/sorte-nordeste-trabalho'
-}]
-export default listOfPosts
+}];
+export default listOfPosts;
