@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { gray90, gray30, gray100 } from '../util/colors'
 
-const titleStyle = (sticky) => css`
+const wrapperStyle = (sticky) => css`
   ${sticky
     ? `
       position: sticky;
@@ -19,6 +19,7 @@ const titleStyle = (sticky) => css`
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
   width: 100%;
+  display: flex;
 
   @media (prefers-color-scheme: dark) {
     background-color: ${gray100};
@@ -26,17 +27,28 @@ const titleStyle = (sticky) => css`
   }
 `
 
+const titleStyle = css`
+  flex: 1 1 auto;
+`;
+
+const spacer = css`
+  min-width: 1ch;
+`;
+
 const subtitleStyle = css`
-  right: 0;
-  position: absolute;
-  display: inline-block;
+  flex: 1 1 auto;
   color: ${gray30};
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: right;
 `
 
 function HeaderDivider ({ title, subtitle, sticky, style }) {
   return (
-    <h6 css={titleStyle(sticky)} style={style}>
-      {title}
+    <h6 css={wrapperStyle(sticky)} style={style}>
+      <span css={titleStyle}>{title}</span>
+      <span css={spacer} />
       {subtitle && <span css={subtitleStyle}>{subtitle}</span>}
     </h6>
   )
