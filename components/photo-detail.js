@@ -21,7 +21,7 @@ function PhotoDetail ({ title, subtitle, imgSrc, imgRatio, camera, shutter, lens
       />
       <p>
         <AspectRatio ratio={imgRatio} backgroundColor={white4}>
-          <img src={imgSrc} />
+          <img src={imgSrc} alt={title} />
         </AspectRatio>
       </p>
       <p css={descriptionStyle}>

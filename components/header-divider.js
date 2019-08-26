@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { gray90, gray30, gray100 } from '../util/colors'
+import lineClamp from '../util/line-clamp'
 
 const wrapperStyle = (sticky) => css`
   ${sticky
@@ -29,6 +30,7 @@ const wrapperStyle = (sticky) => css`
 
 const titleStyle = css`
   flex: 1 1 auto;
+  ${lineClamp({ lines: 1 })};
 `
 
 const spacer = css`
@@ -39,17 +41,16 @@ const subtitleStyle = css`
   flex: 1 1 auto;
   color: ${gray30};
   min-width: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
   text-align: right;
+  ${lineClamp({ lines: 1 })};
 `
 
 function HeaderDivider ({ title, subtitle, sticky, style }) {
   return (
     <h6 css={wrapperStyle(sticky)} style={style}>
-      <span css={titleStyle}>{title}</span>
+      <span css={titleStyle} title={title}>{title}</span>
       <span css={spacer} />
-      {subtitle && <span css={subtitleStyle}>{subtitle}</span>}
+      {subtitle && <span css={subtitleStyle} title={subtitle}>{subtitle}</span>}
     </h6>
   )
 }
