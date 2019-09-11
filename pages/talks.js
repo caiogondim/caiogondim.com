@@ -22,6 +22,26 @@ function Talks () {
             send me an <a href="mailto:me@caiogondim.com">email</a> and let&#039;s get in touch.
           </PageIntro>
 
+          <YearSeparator>2019</YearSeparator>
+
+          <section css={talkContainerStyle}>
+            <h3>Brooklyn.js</h3>
+            <div>
+              <time>September, 2019</time>
+              <address>New York, USA 📍</address>
+            </div>
+            <p>&nbsp;</p>
+            <p>
+              Spoke about <a href="https://github.com/nytimes/babel-fish" target="_blank" rel="noopener noreferrer">babel-fish</a>,
+              an on-the-fly optimized JavaScript transpiler. It acts as a
+              reverse proxy for JavaScript resources and uses information about
+              the requesting browser to optimize transpilation and polyfill
+              addition to make full use of native browser features that are
+              available in the requesting agent. This results in smaller, more
+              performant bundles for newer browsers.
+            </p>
+          </section>
+
           <YearSeparator>2016</YearSeparator>
 
           <section css={talkContainerStyle}>
