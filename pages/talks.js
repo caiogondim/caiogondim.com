@@ -33,7 +33,7 @@ function Talks () {
             <p>&nbsp;</p>
             <p>
               Spoke about <a href="https://github.com/nytimes/babel-fish" target="_blank" rel="noopener noreferrer">babel-fish</a>,
-              an on-the-fly optimized JavaScript transpiler. It acts as a
+              an on-the-fly JavaScript transpiler. It acts as a
               reverse proxy for JavaScript resources and uses information about
               the requesting browser to optimize transpilation and polyfill
               addition to make full use of native browser features that are
