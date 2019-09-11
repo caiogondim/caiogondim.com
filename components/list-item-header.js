@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { gray60 } from '../util/colors'
+import { gray50, gray60 } from '../util/colors'
 
 const containerStyle = css`
   font-variant-numeric: normal;
@@ -24,6 +24,10 @@ const titleStyle = css`
 const subtitleStyle = css`
   margin: 0;
   color: ${gray60};
+
+  @media (prefers-color-scheme: dark) {
+    color: ${gray50};
+  }
 `
 
 function ListItemHeader ({ title, subtitle, titleLink }) {

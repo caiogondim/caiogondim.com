@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import Shell from '../components/shell'
 import Header from '../components/header'
 import Content from '../components/content'
-import { gray30, gray90, gray70 } from '../util/colors'
+import { gray50, gray90, gray60 } from '../util/colors'
 
 const tableOfContentsItemStyle = css`
   text-decoration: none;
@@ -24,10 +24,10 @@ const tableOfContentsItemStyle = css`
   h3 {
     margin-bottom: 0;
     margin-top: 0;
-    color: ${gray30};
+    color: ${gray50};
 
     @media (prefers-color-scheme: dark) {
-      color: ${gray70};
+      color: ${gray60};
     }
   }
 `

@@ -67,8 +67,8 @@ function Header ({ pageName }) {
         <Link prefetch href="/">
           <a>
             <h1>
-              <img src="/static/logo-dark.png" css={logoDarkStyle} />
-              <img src="/static/logo-light.png" css={logoLightStyle} />
+              <img src="/static/logo-dark.png" css={logoDarkStyle} alt="logo" />
+              <img src="/static/logo-light.png" css={logoLightStyle} alt="logo" />
             </h1>
             <h6 css={logoTextStyle}>{pageName}</h6>
           </a>
