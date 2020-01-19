@@ -52,6 +52,54 @@ function Publications () {
                 rel="noopener noreferrer"
               >Link</a></p>
             </li>
+            <li>
+              <ListItemHeader
+                title="O que você pensa sobre o uso da tecnologia na transmissão de um saber?"
+                titleLink="https://escutatorio.com/blog/2017/6/26/o-que-voc-pensa-sobre-o-uso-da-tecnologia-na-transmisso-de-um-saber-por-caio-gondim"
+                subtitle="Article"
+              />
+              <p>
+                Post meu no <a href="https://escutatorio.com/" target="_blank" rel="noopener noreferrer">Escutatório</a> com
+                meus 2 centavos sobre o assunto: &quot;O uso da tecnologia na transmissão de um saber&quot;.
+              </p>
+              <p><a
+                href="https://escutatorio.com/blog/2017/6/26/o-que-voc-pensa-sobre-o-uso-da-tecnologia-na-transmisso-de-um-saber-por-caio-gondim"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Link</a></p>
+            </li>
+            <li>
+              <ListItemHeader
+                title="TW Entrevista 05: Caio Gondim"
+                titleLink="https://www.treinaweb.com.br/blog/tw-entrevista-05-caio-gondim/"
+                subtitle="Interview"
+              />
+              <p>
+                Uma entrevista que dei ao blog <a href="https://www.treinaweb.com.br" target="_blank" rel="noopener noreferrer">TreinaWeb</a> contando
+                um pouco da minha carreira e experiências.
+              </p>
+              <p><a
+                href="https://www.treinaweb.com.br/blog/tw-entrevista-05-caio-gondim/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Link</a></p>
+            </li>
+            <li>
+              <ListItemHeader
+                title="Como se tornar um desenvolvedor melhor"
+                titleLink="https://tableless.com.br/pesquisa-como-se-tornar-um-desenvolvedor-melhor/"
+                subtitle="Interview"
+              />
+              <p>
+                O <a href="https://tableless.com.br" target="_blank" rel="noopener noreferrer">Tableless</a> me
+                perguntou "Como se tornar um desenvolvedor melhor" e nesse post dei minha opinião ao lado de vários outros influentes profissionais brasileiros.
+              </p>
+              <p><a
+                href="https://tableless.com.br/pesquisa-como-se-tornar-um-desenvolvedor-melhor/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Link</a></p>
+            </li>
           </ul>
         </div>
       </Content>
