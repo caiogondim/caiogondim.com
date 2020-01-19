@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Content from '../components/content'
 import YearSeparator from '../components/year-separator'
 import PageIntro from '../components/page-intro'
+import LinkTargetBlank from '../components/link-target-blank'
 import { css } from '@emotion/core'
 
 const talkContainerStyle = css`
@@ -32,7 +33,7 @@ function Talks () {
             </div>
             <p>&nbsp;</p>
             <p>
-              Spoke about <a href="https://github.com/nytimes/babel-fish" target="_blank" rel="noopener noreferrer">babel-fish</a>,
+              Spoke about <LinkTargetBlank href="https://github.com/nytimes/babel-fish">babel-fish</LinkTargetBlank>,
               an on-the-fly JavaScript transpiler. It acts as a
               reverse proxy for JavaScript resources and uses information about
               the requesting browser to optimize transpilation and polyfill
@@ -49,7 +50,7 @@ function Talks () {
             <div>
               <time>November, 2016</time>
               <address>São Luís, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/ab-test" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/ab-test">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -60,7 +61,7 @@ function Talks () {
             <div>
               <time>April, 2015</time>
               <address>Amsterdam, Netherlands 📍</address>
-              <a href="https://github.com/caiogondim/logdown.js" target="_blank" rel="noopener noreferrer">Project</a>
+              <LinkTargetBlank href="https://github.com/caiogondim/logdown.js">Project</LinkTargetBlank>
             </div>
           </section>
 
@@ -69,7 +70,7 @@ function Talks () {
             <div>
               <time>April, 2015</time>
               <address>São Luís, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/ab-test" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/ab-test">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -78,7 +79,7 @@ function Talks () {
             <div>
               <time>May, 2015</time>
               <address>São Paulo, Brazil 📍</address>
-              <a href="http://www.slideshare.net/caiogondim/256-shades-of-r-g-and-b" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="http://www.slideshare.net/caiogondim/256-shades-of-r-g-and-b">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -87,7 +88,7 @@ function Talks () {
             <div>
               <time>October, 2015</time>
               <address>São Luís, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/ab-test" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/ab-test">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -98,7 +99,7 @@ function Talks () {
             <div>
               <time>May, 2014</time>
               <address>Fortaleza, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/designing-js-apis" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/designing-js-apis">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -107,9 +108,9 @@ function Talks () {
             <div>
               <time>September, 2014</time>
               <address>São Paulo, Brazil 📍</address>
-              <a href="http://conferenciaweb.w3c.br/2014/" target="_blank" rel="noopener noreferrer">Event</a><br />
-              <a href="https://speakerdeck.com/caiogondim/ab-test" target="_blank" rel="noopener noreferrer">Slides</a><br />
-              <a href="https://www.youtube.com/watch?v=KcwIh1TfgI0" target="_blank" rel="noopener noreferrer">Video</a><br />
+              <LinkTargetBlank href="http://conferenciaweb.w3c.br/2014/">Event</LinkTargetBlank><br />
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/ab-test">Slides</LinkTargetBlank><br />
+              <LinkTargetBlank href="https://www.youtube.com/watch?v=KcwIh1TfgI0">Video</LinkTargetBlank><br />
             </div>
           </section>
 
@@ -120,7 +121,7 @@ function Talks () {
             <div>
               <time>March, 2013</time>
               <address>Porto Alegre, Brazil 📍</address>
-              <a href="http://rsjs.org/2013/" target="_blank" rel="noopener noreferrer">Event</a>
+              <LinkTargetBlank href="http://rsjs.org/2013/">Event</LinkTargetBlank>
             </div>
           </section>
 
@@ -129,8 +130,8 @@ function Talks () {
             <div>
               <time>May, 2013</time>
               <address>Florianópolis, Brazil 📍</address>
-              <a href="http://www.olhoseo.com.br/2013/" target="_blank" rel="noopener noreferrer">Event</a><br />
-              <a href="https://speakerdeck.com/caiogondim/html5-sensitivo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="http://www.olhoseo.com.br/2013/">Event</LinkTargetBlank><br />
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-sensitivo">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -155,8 +156,8 @@ function Talks () {
             <div>
               <time>September, 2013</time>
               <address>São Paulo, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/css-layout-o-ontem-o-hoje-e-o-depois" target="_blank" rel="noopener noreferrer">Slides</a><br />
-              <a href="https://www.youtube.com/watch?v=MjK1MCjqmpU" target="_blank" rel="noopener noreferrer">Video</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/css-layout-o-ontem-o-hoje-e-o-depois">Slides</LinkTargetBlank><br />
+              <LinkTargetBlank href="https://www.youtube.com/watch?v=MjK1MCjqmpU">Video</LinkTargetBlank>
             </div>
           </section>
 
@@ -165,7 +166,7 @@ function Talks () {
             <div>
               <time>November, 2013</time>
               <address>Recife, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-sensitivo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-sensitivo">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -174,8 +175,8 @@ function Talks () {
             <div>
               <time>November, 2013</time>
               <address>São Paulo, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-sensitivo" target="_blank" rel="noopener noreferrer">Slides</a><br />
-              <a href="http://conferenciaweb.w3c.br/2013/" target="_blank" rel="noopener noreferrer">Event</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-sensitivo">Slides</LinkTargetBlank><br />
+              <LinkTargetBlank href="http://conferenciaweb.w3c.br/2013/">Event</LinkTargetBlank>
             </div>
           </section>
 
@@ -184,7 +185,7 @@ function Talks () {
             <div>
               <time>November, 2013</time>
               <address>Fortaleza, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-sensitivo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-sensitivo">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -193,7 +194,7 @@ function Talks () {
             <div>
               <time>November, 2013</time>
               <address>Nova Friburgo, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-sensitivo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-sensitivo">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -204,7 +205,7 @@ function Talks () {
             <div>
               <time>October, 2012</time>
               <address>Maceió, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-sensitivo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-sensitivo">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -215,7 +216,7 @@ function Talks () {
             <div>
               <time>October, 2011</time>
               <address>São Luís, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-seu-navegador-nao-e-mais-o-mesmo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-seu-navegador-nao-e-mais-o-mesmo">Slides</LinkTargetBlank>
             </div>
           </section>
 
@@ -224,7 +225,7 @@ function Talks () {
             <div>
               <time>December, 2011</time>
               <address>São Paulo, Brazil 📍</address>
-              <a href="https://speakerdeck.com/caiogondim/html5-seu-navegador-nao-e-mais-o-mesmo" target="_blank" rel="noopener noreferrer">Slides</a>
+              <LinkTargetBlank href="https://speakerdeck.com/caiogondim/html5-seu-navegador-nao-e-mais-o-mesmo">Slides</LinkTargetBlank>
             </div>
           </section>
         </div>

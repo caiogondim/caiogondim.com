@@ -3,6 +3,7 @@ import { css } from '@emotion/core'
 import Shell from '../components/shell'
 import Header from '../components/header'
 import Content from '../components/content'
+import LinkTargetBlank from '../components/link-target-blank'
 import { gray50, gray90, gray60 } from '../util/colors'
 
 const tableOfContentsItemStyle = css`
@@ -41,9 +42,9 @@ function Index () {
           <Link prefetch href="/about">
             <a css={tableOfContentsItemStyle}><h3>ABOUT</h3></a>
           </Link>
-          <a href="https://github.com/caiogondim" rel="noopener noreferrer" target="_blank" css={tableOfContentsItemStyle}>
+          <LinkTargetBlank href="https://github.com/caiogondim" css_={tableOfContentsItemStyle}>
             <h3>CODE</h3>
-          </a>
+          </LinkTargetBlank>
           <Link prefetch href="/photos">
             <a css={tableOfContentsItemStyle}><h3>PHOTOS</h3></a>
           </Link>
@@ -56,9 +57,9 @@ function Index () {
           <Link prefetch href="/publications">
             <a css={tableOfContentsItemStyle}><h3>PUBLICATIONS</h3></a>
           </Link>
-          <a href="https://www.linkedin.com/in/cgondim/" rel="noopener noreferrer" target="_blank" css={tableOfContentsItemStyle}>
+          <LinkTargetBlank href="https://www.linkedin.com/in/cgondim/" css_={tableOfContentsItemStyle}>
             <h3>RÉSUMÉ</h3>
-          </a>
+          </LinkTargetBlank>
           <Link href="/talks">
             <a css={tableOfContentsItemStyle}><h3>TALKS</h3></a>
           </Link>
