@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import superstylin from 'superstylin'
 import { Global, css } from '@emotion/core'
 import isDarkMode from '../util/is-dark-mode'
 
@@ -22,8 +21,6 @@ function Shell ({ children, width }) {
         }
         <Global
           styles={css`
-            ${superstylin.toString()}
-
             body {
               margin: calc((100vw / 25) * 1.563);
               max-width: 100%;

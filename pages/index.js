@@ -39,22 +39,22 @@ function Index () {
       <Header />
       <Content>
         <div>
-          <Link prefetch href="/about">
+          <Link href="/about">
             <a css={tableOfContentsItemStyle}><h3>ABOUT</h3></a>
           </Link>
           <LinkTargetBlank href="https://github.com/caiogondim" css_={tableOfContentsItemStyle}>
             <h3>CODE</h3>
           </LinkTargetBlank>
-          <Link prefetch href="/photos">
+          <Link href="/photos">
             <a css={tableOfContentsItemStyle}><h3>PHOTOS</h3></a>
           </Link>
-          <Link prefetch href="/posts">
+          <Link href="/posts">
             <a css={tableOfContentsItemStyle}><h3>POSTS</h3></a>
           </Link>
-          <Link prefetch href="/projects">
+          <Link href="/projects">
             <a css={tableOfContentsItemStyle}><h3>PROJECTS</h3></a>
           </Link>
-          <Link prefetch href="/publications">
+          <Link href="/publications">
             <a css={tableOfContentsItemStyle}><h3>PUBLICATIONS</h3></a>
           </Link>
           <LinkTargetBlank href="https://www.linkedin.com/in/cgondim/" css_={tableOfContentsItemStyle}>

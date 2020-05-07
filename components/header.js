@@ -7,6 +7,7 @@ const sectionStyle = css`
   display: flex;
   padding-top: 0;
   max-width: 66rem;
+  margin-bottom: 3.815rem;
 
   a {
     text-decoration: none;
@@ -62,9 +63,9 @@ const logoTextStyle = css`
 
 function Header ({ pageName }) {
   return (
-    <section css={sectionStyle} className="u-readable">
+    <section css={sectionStyle}>
       <header>
-        <Link prefetch href="/">
+        <Link href="/">
           <a>
             <h1>
               <img src="/static/logo-dark.png" css={logoDarkStyle} alt="logo" />

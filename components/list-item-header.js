@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 import { css } from '@emotion/core'
 import { gray50, gray60 } from '../util/colors'
 
@@ -36,7 +37,9 @@ function ListItemHeader ({ title, subtitle, titleLink }) {
       <p css={subtitleStyle}>{subtitle}</p>
       <h3 css={titleStyle}>
         {titleLink
-          ? <a href={titleLink}>{title}</a>
+          ? (<Link href={titleLink}>
+               <a>{title}</a>
+             </Link>)
           : title
         }
       </h3>

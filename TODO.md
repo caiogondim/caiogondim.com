@@ -4,9 +4,6 @@
 - remove asterism component (use hr)
 - rename prettier to format
 - update superstylin
-- dark mode
-- lint code
-  - props
 - fade in images
 - remove back forward cache
   - on pop state on componentDidMount
