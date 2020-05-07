@@ -38,8 +38,8 @@ function ListItemHeader ({ title, subtitle, titleLink }) {
       <h3 css={titleStyle}>
         {titleLink
           ? (<Link href={titleLink}>
-               <a>{title}</a>
-             </Link>)
+            <a>{title}</a>
+          </Link>)
           : title
         }
       </h3>

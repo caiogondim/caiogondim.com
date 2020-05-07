@@ -73,7 +73,7 @@ function Publications () {
               />
               <p>
                 O <LinkTargetBlank href="https://tableless.com.br">Tableless</LinkTargetBlank> me
-                perguntou "Como se tornar um desenvolvedor melhor" e nesse post dei minha opinião ao lado de vários outros influentes profissionais brasileiros.
+                perguntou &quot;Como se tornar um desenvolvedor melhor&quot; e nesse post dei minha opiniao ao lado de varios outros influentes profissionais brasileiros.
               </p>
             </li>
           </ul>

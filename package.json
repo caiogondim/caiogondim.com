@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "eslint --fix 'pages/**/*.js' 'components/**/*.js' 'util/**/*.js' 'next.config.js' 'now.json' --ignore-path util/list-of-posts.js",
     "update-list-of-posts": "./scripts/update-list-of-posts",
-    "deploy": "now"
+    "deploy": "now",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
