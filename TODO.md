@@ -1,12 +1,10 @@
-- Rename supertylin class `u-readable` to `superstylin-readable`
+- run update-list-of-posts and create symlink after npm install
+
 - create next-import-static (based on next-images)
 - update-list-of-posts script
 - remove asterism component (use hr)
 - rename prettier to format
 - update superstylin
-- dark mode
-- lint code
-  - props
 - fade in images
 - remove back forward cache
   - on pop state on componentDidMount

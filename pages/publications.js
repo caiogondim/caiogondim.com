@@ -29,7 +29,7 @@ function Publications () {
             <li>
               <ListItemHeader
                 title="How I wrote the world's fastest JavaScript memoization library"
-                titleLink="https://community.risingstack.com/the-worlds-fastest-javascript-memoization-library/"
+                titleLink="//community.risingstack.com/the-worlds-fastest-javascript-memoization-library/"
                 subtitle="Article"
               />
               <p>An in-depth article on how I used the scientific method to create the fastest memoize library in JavaScript.</p>
@@ -37,7 +37,7 @@ function Publications () {
             <li>
               <ListItemHeader
                 title="Coletânea Front-end: Uma antologia da comunidade front-end brasileira"
-                titleLink="https://www.casadocodigo.com.br/products/livro-coletanea-front-end"
+                titleLink="//www.casadocodigo.com.br/products/livro-coletanea-front-end"
                 subtitle="Book"
               />
               <p>A comunidade brasileira de programadores front-end e Web Designers é fantástica. Possui uma força imensa de elevar a qualidade da Web brasileira. Os milhares de representantes dessa comunidade produzem conteúdos ótimos em seus blogs, listas de discussão, Facebook e conversas de boteco. Nós nos encontramos em eventos memoráveis em todo o Brasil. Fazemos a Web progredir.</p>
@@ -46,7 +46,7 @@ function Publications () {
             <li>
               <ListItemHeader
                 title="O que você pensa sobre o uso da tecnologia na transmissão de um saber?"
-                titleLink="https://escutatorio.com/blog/2017/6/26/o-que-voc-pensa-sobre-o-uso-da-tecnologia-na-transmisso-de-um-saber-por-caio-gondim"
+                titleLink="//escutatorio.com/blog/2017/6/26/o-que-voc-pensa-sobre-o-uso-da-tecnologia-na-transmisso-de-um-saber-por-caio-gondim"
                 subtitle="Article"
               />
               <p>
@@ -57,7 +57,7 @@ function Publications () {
             <li>
               <ListItemHeader
                 title="TW Entrevista 05: Caio Gondim"
-                titleLink="https://www.treinaweb.com.br/blog/tw-entrevista-05-caio-gondim/"
+                titleLink="//www.treinaweb.com.br/blog/tw-entrevista-05-caio-gondim/"
                 subtitle="Interview"
               />
               <p>
@@ -68,12 +68,12 @@ function Publications () {
             <li>
               <ListItemHeader
                 title="Como se tornar um desenvolvedor melhor"
-                titleLink="https://tableless.com.br/pesquisa-como-se-tornar-um-desenvolvedor-melhor/"
+                titleLink="//tableless.com.br/pesquisa-como-se-tornar-um-desenvolvedor-melhor/"
                 subtitle="Interview"
               />
               <p>
                 O <LinkTargetBlank href="https://tableless.com.br">Tableless</LinkTargetBlank> me
-                perguntou "Como se tornar um desenvolvedor melhor" e nesse post dei minha opinião ao lado de vários outros influentes profissionais brasileiros.
+                perguntou &quot;Como se tornar um desenvolvedor melhor&quot; e nesse post dei minha opiniao ao lado de varios outros influentes profissionais brasileiros.
               </p>
             </li>
           </ul>
