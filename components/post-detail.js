@@ -58,7 +58,7 @@ PostDetail.propTypes = {
   meta: PropTypes.shape({
     title: PropTypes.string,
     link: PropTypes.string,
-    date: PropTypes.string
+    dateString: PropTypes.string
   })
 }
 
