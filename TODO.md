@@ -1,4 +1,5 @@
-- Rename supertylin class `u-readable` to `superstylin-readable`
+- run update-list-of-posts and create symlink after npm install
+
 - create next-import-static (based on next-images)
 - update-list-of-posts script
 - remove asterism component (use hr)

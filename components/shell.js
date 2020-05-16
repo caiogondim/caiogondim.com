@@ -14,6 +14,7 @@ function Shell ({ children, width }) {
   return (
     <div css={shellStyle({ width })}>
       <Head>
+        <link rel="stylesheet" href="/static/superstylin.css" />
         <title>CAIO GONDIM</title>
         {isDarkMode()
           ? <link rel="icon" type="image/png" href="/static/logo-light.png" />
