@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@now/static-build" }
-  ],
   "routes": [
     { "src": "/public/.+", "headers": { "cache-control": "s-maxage=31536000, max-age=86400, stale-while-revalidate=86400" } }
   ],
