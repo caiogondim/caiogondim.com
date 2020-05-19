@@ -1,7 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/public/.+", "headers": { "cache-control": "s-maxage=31536000, max-age=86400, stale-while-revalidate=86400" } }
+    { "src": "/public/static/.+", "headers": { "cache-control": "s-maxage=31536000, max-age=86400, stale-while-revalidate=86400" } }
   ],
   "alias": ["caiogondim.com"]
 }
