@@ -2,8 +2,13 @@
   "version": 2,
   "headers": [
     {
-      "source": "/public/static/.+",
-      "headers": { "cache-control": "s-maxage=31536000, max-age=86400, stale-while-revalidate=86400" }
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "s-maxage=31536000, max-age=86400, stale-while-revalidate=86400"
+        }
+      ]
     }
   ],
   "alias": ["caiogondim.com"]
