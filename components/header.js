@@ -70,8 +70,8 @@ function Header ({ pageName }) {
       <header>
         <Link href="/">
           <a>
-            <img src="/static/logo-dark.png" css={logoDarkStyle} alt="logo" />
-            <img src="/static/logo-light.png" css={logoLightStyle} alt="logo" />
+            <img src="/static/logo-dark.png" css={logoDarkStyle} alt="logo" width={1024} height={1024} />
+            <img src="/static/logo-light.png" css={logoLightStyle} alt="logo" width={1024} height={1024} />
             <h6 css={logoTextStyle}>{pageName}</h6>
           </a>
         </Link>
