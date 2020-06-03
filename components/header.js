@@ -25,6 +25,9 @@ const logoStyle = css`
   height: 3.052rem;
   border-radius: 50%;
   background-color: ${white4};
+  margin-bottom: 1rem;
+  font-size: 0px;
+  overflow: hidden;
 `
 
 const logoDarkStyle = css`
@@ -67,10 +70,8 @@ function Header ({ pageName }) {
       <header>
         <Link href="/">
           <a>
-            <h1>
-              <img src="/static/logo-dark.png" css={logoDarkStyle} alt="logo" />
-              <img src="/static/logo-light.png" css={logoLightStyle} alt="logo" />
-            </h1>
+            <img src="/static/logo-dark.png" css={logoDarkStyle} alt="logo" />
+            <img src="/static/logo-light.png" css={logoLightStyle} alt="logo" />
             <h6 css={logoTextStyle}>{pageName}</h6>
           </a>
         </Link>

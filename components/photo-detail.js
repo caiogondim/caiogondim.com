@@ -4,6 +4,7 @@ import Shell from './shell'
 import Header from './header'
 import HeaderDivider from './header-divider'
 import AspectRatio from './aspect-ratio'
+import Image from './image'
 import { gray30, white4 } from '../util/colors'
 
 const descriptionStyle = css`
@@ -21,7 +22,7 @@ function PhotoDetail ({ title, subtitle, imgSrc, imgRatio, camera, shutter, lens
       />
       <p>
         <AspectRatio ratio={imgRatio} backgroundColor={white4}>
-          <img src={imgSrc} alt={title} />
+          <Image src={imgSrc} alt={title} />
         </AspectRatio>
       </p>
       <p css={descriptionStyle}>
