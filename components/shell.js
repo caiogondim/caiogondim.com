@@ -23,7 +23,7 @@ function Shell ({ children, width }) {
         <Global
           styles={css`
             body {
-              margin: calc((100vw / 25) * 1.563);
+              margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
               max-width: 100%;
             }
 
