@@ -27,8 +27,7 @@
   "dependencies": {
     "next": "9.4.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "superstylin": "2.2.4"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "@babel/generator": "7.9.6",
